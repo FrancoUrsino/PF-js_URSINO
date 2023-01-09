@@ -3,6 +3,7 @@ let election;
 let total = 0;
 let allOptions = "";
 let exit = false;
+let travel = "";
 
 function choseOption (){
 
@@ -12,22 +13,26 @@ showOptions = parseInt(prompt("1) Viaje a Mendoza $1000  2) Viaje a Cordoba $150
     case 1:
       option = Number(prompt("Genial! elegiste VIAJE A MENDOZA, ahora indique cuantos boletos va a querer comprar"))
       total += manyOfTickets(option, 1000)
-      alert("Agregaste ${option} por un total de "+ total)
+      travel = "VIAJE A MENDOZA"
+      alert("Agregaste"+travel+" por un total de "+ total)
       break;
       case 2:
         option = Number(prompt("Genail!! elegiste VIAJE A CORDOBA, ahora indique cuantos boletos va a querer comprar"))
         total += manyOfTickets(option, 1500)
-        alert("Agregaste ${option} por un total de "+ total)
+        travel = "VIAJE A CORDOBA"
+        alert("Agregaste"+travel+" por un total de "+ total)
       break;
       case 3:
         option = Number(prompt("Genail! elegiste VIAJE A TUCUMAN, ahora indique cuantos boletos va a querer comprar"))
         total += manyOfTickets(option, 2000)
-        alert("Agregaste ${option} por un total de "+ total)
+        travel = "VIAJE A TUCUMAN"
+        alert("Agregaste"+travel+" por un total de "+ total)
       break;
       case 4:
         option = Number(prompt("Genail!! elegiste VIAJE A MISIONES, ahora indique cuantos boletos va a querer comprar"))
         total += manyOfTickets(option, 4000)
-        alert("Agregaste ${option} por un total de "+ total)
+        travel = "VIAJE A MISIONES"
+        alert("Agregaste"+travel+" por un total de "+ total)
       break;
 
       default:
@@ -41,7 +46,7 @@ const manyOfTickets = (cantidad, precio) => {
 }
 
 function carMarket () {
-election = prompt("Has seleccionado "+option+"por un total de "+total+"¿quieres abonar?"+" "+"escriba si o no")
+election = prompt("Has seleccionado "+travel+"por un total de "+total+"¿quieres abonar?"+" "+"escriba si o no")
 
   if(election === "si") {
     alert("BUENISIMO, ya estas a unos pasos de optener tus boletos");
