@@ -46,7 +46,7 @@ const manyOfTickets = (cantidad, precio) => {
 }
 
 function carMarket () {
-election = prompt("Has seleccionado "+travel+"por un total de "+total+"¿quieres abonar?"+" "+"escriba si o no")
+election = prompt("Has seleccionado "+allOptions+"por un total de "+total+"¿quieres abonar?"+" "+"escriba si o no")
 
   if(election === "si") {
     alert("BUENISIMO, ya estas a unos pasos de optener tus boletos");
@@ -81,7 +81,7 @@ do{
         if (allOptions = ""){
           alert("No has seleccionado ningun viaje");
         }else{
-          alert("Agregaste: "+" "+travel+" por un total de: "+total);
+          alert("Agregaste: "+" "+allOptions+" por un total de: "+total);
           carMarket();
         }
       break;
