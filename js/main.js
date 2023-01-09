@@ -81,7 +81,7 @@ do{
         if (allOptions = ""){
           alert("No has seleccionado ningun viaje");
         }else{
-          alert("Agregaste: "+option+" por un total de: "+total);
+          alert("Agregaste: "+" "+travel+" por un total de: "+total);
           carMarket();
         }
       break;
