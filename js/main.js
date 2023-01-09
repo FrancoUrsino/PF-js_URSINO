@@ -49,7 +49,7 @@ function carMarket () {
 election = prompt("Has seleccionado "+allOptions+"por un total de "+total+"¿quieres abonar?"+" "+"escriba si o no")
 
   if(election === "si") {
-    alert("BUENISIMO, ya estas a unos pasos de optener tus boletos");
+    alert("BUENISIMO, ya estas a unos pasos de optener tus boletos, ahora ingrese 0 en el proximo dialogo");
     allOptions = "";
     total = 0;
     
