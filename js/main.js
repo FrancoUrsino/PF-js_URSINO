@@ -81,4 +81,4 @@ do{
         exit = true;
       break;
   }
-}while(exit)
+}while(!exit)
