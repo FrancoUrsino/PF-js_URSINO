@@ -14,25 +14,25 @@ showOptions = parseInt(prompt("1) Viaje a Mendoza $1000  2) Viaje a Cordoba $150
       option = Number(prompt("Genial! elegiste VIAJE A MENDOZA, ahora indique cuantos boletos va a querer comprar"))
       total += manyOfTickets(option, 1000)
       travel = "VIAJE A MENDOZA"
-      alert("Agregaste"+travel+" por un total de "+ total)
+      alert("Agregaste "+travel+" por un total de "+ total)
       break;
       case 2:
         option = Number(prompt("Genail!! elegiste VIAJE A CORDOBA, ahora indique cuantos boletos va a querer comprar"))
         total += manyOfTickets(option, 1500)
         travel = "VIAJE A CORDOBA"
-        alert("Agregaste"+travel+" por un total de "+ total)
+        alert("Agregaste "+travel+" por un total de "+ total)
       break;
       case 3:
         option = Number(prompt("Genail! elegiste VIAJE A TUCUMAN, ahora indique cuantos boletos va a querer comprar"))
         total += manyOfTickets(option, 2000)
         travel = "VIAJE A TUCUMAN"
-        alert("Agregaste"+travel+" por un total de "+ total)
+        alert("Agregaste "+travel+" por un total de "+ total)
       break;
       case 4:
         option = Number(prompt("Genail!! elegiste VIAJE A MISIONES, ahora indique cuantos boletos va a querer comprar"))
         total += manyOfTickets(option, 4000)
         travel = "VIAJE A MISIONES"
-        alert("Agregaste"+travel+" por un total de "+ total)
+        alert("Agregaste "+travel+" por un total de "+ total)
       break;
 
       default:
@@ -81,7 +81,7 @@ do{
         if (allOptions = ""){
           alert("No has seleccionado ningun viaje");
         }else{
-          alert("Agregaste: "+" "+allOptions+" por un total de: "+total);
+          alert("Agregaste: "+" "+travel+" por un total de: "+total);
           carMarket();
         }
       break;
