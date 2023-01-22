@@ -1,0 +1,59 @@
+.travel{
+  background-color: rgb(67, 167, 73);
+  padding-block: 20px;
+  
+
+  &__form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    &--container{
+      margin: 0 8px 15px;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+
+      &--label{
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        margin: 0 0 0 5px;
+        padding-left: 10px;
+      }
+      
+      &--input{
+        background-color: white;
+        border-radius: 50px;
+        border: transparent;
+        padding: 5px 15px;
+        font-size: 23px;
+        
+        &::placeholder{
+          color: rgba(169, 169, 169, 0.605);
+        }
+      }
+    }
+
+  }
+  &__btn{
+    display: flex;
+    justify-content: center;
+
+    &--btn{
+      width: 350px;
+      font-weight: bold;
+      margin-top: 35px;
+      border: 1px solid $white;
+      border-radius: 100px;
+      padding: 10px 15px;
+      transition: $transition;
+      color: $white;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+  
+  
+      &:hover, &:focus{
+        letter-spacing: .7rem;
+        color:rgba(255, 255, 255, 0.441)
+      }
+    }
+  }
+}

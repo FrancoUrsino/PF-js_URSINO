@@ -1,0 +1,64 @@
+.popular{
+  width: 80%;
+  margin: 15px auto;
+
+  &__container--list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    gap: 2em;
+    overflow: hidden;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  &__container--list, &__container--list > .popular__container--list--item:not(:last-child){
+    margin-bottom: 30px;
+  }
+
+  &__card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    height: 500px;
+    width: 350px;
+
+    &--img{
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &--container{
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(3px);
+      border-radius: 25px;
+      padding: 20px;
+      color: white;
+
+      &--stars{
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        transform: translateY(-50%);
+      }
+
+      &--site{
+        font-size: 15px;
+        font-weight: bolder;
+      }
+
+      &--title{
+        font-size: 1.4rem;
+        font-weight: bolder;
+      }
+    }
+  }
+}

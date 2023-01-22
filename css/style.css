@@ -4,74 +4,153 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+.nav {
+  background-color: rgba(255, 255, 255, 0.315);
+}
+.nav__logo {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+.nav__menu {
+  background-color: rgba(255, 255, 255, 0.315);
+  backdrop-filter: blur(2px);
+}
+
 .header {
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header.jpg);
+  background-image: url(../img/header.jpg);
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 2fr 100px;
-  justify-content: center;
-  align-items: center;
+  height: 73vh;
 }
-.header__container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  margin-top: 50px;
+
+.travel {
+  background-color: rgb(67, 167, 73);
+  padding-block: 20px;
 }
-.header__container--title {
+.travel__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+}
+.travel__form--container {
+  margin: 0 8px 15px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+.travel__form--container--label {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin: 0 0 0 5px;
+  padding-left: 10px;
+}
+.travel__form--container--input {
+  background-color: white;
+  border-radius: 50px;
+  border: transparent;
+  padding: 5px 15px;
+  font-size: 23px;
+}
+.travel__form--container--input::placeholder {
+  color: rgba(169, 169, 169, 0.605);
+}
+.travel__btn {
   display: flex;
   justify-content: center;
-  color: #198754;
-  font-size: 5rem;
-  font-weight: bold;
-  text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.476);
-  padding-top: 55px;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
 }
-.header__container--text {
-  width: 80%;
-  margin: 0 auto;
+.travel__btn--btn {
+  width: 350px;
+  font-weight: bold;
+  margin-top: 35px;
+  border: 1px solid white;
+  border-radius: 100px;
+  padding: 10px 15px;
+  transition: 0.4s, easy-in-out;
+  color: white;
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
-.header__inputs {
+.travel__btn--btn:hover, .travel__btn--btn:focus {
+  letter-spacing: 0.7rem;
+  color: rgba(255, 255, 255, 0.441);
+}
+
+.popular {
   width: 80%;
+  margin: 15px auto;
+}
+.popular__container--list {
   display: grid;
-  grid-template-columns: 1fr 100px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  gap: 2em;
+  overflow: hidden;
+  justify-content: center;
+  margin: 10px 0;
 }
-.header__inputs--search {
-  width: 90%;
-  justify-self: flex-start;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 1px solid #198754;
-  border-radius: 6px;
+.popular__container--list, .popular__container--list > .popular__container--list--item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.popular__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  height: 500px;
+  width: 350px;
+}
+.popular__card--img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.popular__card--container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(3px);
+  border-radius: 25px;
+  padding: 20px;
   color: white;
-  text-transform: uppercase;
-  padding: 0 10px;
-  outline: none;
 }
-.header__inputs--search:focus {
-  border: none;
-}
-.header__inputs--search::placeholder {
+.popular__card--container--stars {
   color: white;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transform: translateY(-50%);
 }
-.header__inputs--btn {
-  padding: 5px 15px;
-  background-color: #198754;
-  border: #198754;
-  border-radius: 8px;
-  color: white;
-  transition: 0.3s;
+.popular__card--container--site {
+  font-size: 15px;
+  font-weight: bolder;
 }
-.header__inputs--btn:hover {
-  border: none;
-  background-color: #165f3c;
+.popular__card--container--title {
+  font-size: 1.4rem;
+  font-weight: bolder;
 }
 
 /*# sourceMappingURL=style.css.map */
