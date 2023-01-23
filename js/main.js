@@ -4,7 +4,7 @@ let exit = false;
 let cart = [];
 let ticketsTotal = 0;
 let option;
-let optionChange;
+// let optionAdd = 0;
 let answer;
 
 
@@ -58,10 +58,11 @@ const manyOfTickets = (cantidad, precio) => {
     return cantidad * precio
 }
 
-// Function of total price 
-const totalPriceTravel = (ticketsTotal, resto) => {
-    return ticketsTotal - resto
-}
+// // Function of total price 
+// const totalPriceTravel = (ticketsTotal, resto) => {
+//     return ticketsTotal - resto
+// }
+
 
 // Function to add to cart
 function addToCart(product){
@@ -280,7 +281,7 @@ do{
         sortTravel(travelOptions);
         break;
       case 5:
-        alert("todavía no se como armar el filtro");
+        alert("Proximamente");
         break;
       case 6:
         if (cart == ""){
