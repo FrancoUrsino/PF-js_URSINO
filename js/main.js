@@ -5,6 +5,7 @@ let cart = [];
 let ticketsTotal = 0;
 let option;
 let optionChange;
+let answer;
 
 
 // Create Travels INIT
@@ -58,8 +59,8 @@ const manyOfTickets = (cantidad, precio) => {
 }
 
 // Function of total price 
-const totalPriceTravel = (ticketsTotal) => {
-    return ticketsTotal 
+const totalPriceTravel = (ticketsTotal, resto) => {
+    return ticketsTotal - resto
 }
 
 // Function to add to cart
@@ -134,29 +135,53 @@ function choseTravel(){
       option = parseInt(prompt(`Que Bien, elegiste Buenos Aires con un costo de $1500 por boleto,¿Cuántos boletos desea?`));
       ticketsTotal= 0;
       ticketsTotal+= manyOfTickets(option, 1500)
-      alert(`El precio de ${option} boletos es ${ticketsTotal}`)
-      addToCart(travel1);
+      answer = prompt(`El precio de ${option} boletos es ${ticketsTotal} ¿Desea Añadirlos al carrito? (elija si o no)`).toLowerCase();
+      if (answer == "no"){
+        alert("No hay problema, elija otra provincia que le guste aun más");
+      }else if(answer == "si"){
+        addToCart(travel1);
+      }else{
+        alert("escriba si o no para continuar");
+      }
     break;
     case 2:
       option = parseInt(prompt(`Que Bien, elegiste Salta con un costo de $2000 por boleto,¿Cuántos boletos desea?`));
       ticketsTotal= 0;
       ticketsTotal+= manyOfTickets(option, 2000)
-      alert(`El precio de ${option} boletos es ${ticketsTotal}`)
-      addToCart(travel2)
+      answer = prompt(`El precio de ${option} boletos es ${ticketsTotal} ¿Desea Añadirlos al carrito? (elija si o no)`).toLowerCase();
+      if (answer == "no"){
+        alert("No hay problema, elija otra provincia que le guste aun más");
+      }else if(answer == "si"){
+        addToCart(travel2);
+      }else{
+        alert("escriba si o no para continuar");
+      }
     break;
     case 3:
       option = parseInt(prompt(`Que Bien, elegiste Usuahia con un costo de $6000 por boleto,¿Cuántos boletos desea?`));
       ticketsTotal= 0;
       ticketsTotal+= manyOfTickets(option, 6000)
-      alert(`El precio de ${option} boletos es ${ticketsTotal}`)
-      addToCart(travel7)
+      answer = prompt(`El precio de ${option} boletos es ${ticketsTotal} ¿Desea Añadirlos al carrito? (elija si o no)`).toLowerCase();
+      if (answer == "no"){
+        alert("No hay problema, elija otra provincia que le guste aun más");
+      }else if(answer == "si"){
+        addToCart(travel7);
+      }else{
+        alert("escriba si o no para continuar");
+      }
     break;
     case 4:
       option = parseInt(prompt(`Que Bien, elegiste Cordoba con un costo de $1000 por boleto,¿Cuántos boletos desea?`));
       ticketsTotal= 0;
       ticketsTotal+= manyOfTickets(option, 1000)
-      alert(`El precio de ${option} boletos es ${ticketsTotal}`)
-      addToCart(travel6)
+      answer = prompt(`El precio de ${option} boletos es ${ticketsTotal} ¿Desea Añadirlos al carrito? (elija si o no)`).toLowerCase();
+      if (answer == "no"){
+        alert("No hay problema, elija otra provincia que le guste aun más");
+      }else if(answer == "si"){
+        addToCart(travel6);
+      }else{
+        alert("escriba si o no para continuar");
+      }
       break;
     case 5:
       alert("OH! Ya no tenemos vuelos para este destino")
@@ -165,22 +190,40 @@ function choseTravel(){
       option = parseInt(prompt(`Que Bien, elegiste Mendoza con un costo de $3000 por boleto,¿Cuántos boletos desea?`));
       ticketsTotal= 0;
       ticketsTotal+= manyOfTickets(option, 3000)
-      alert(`El precio de ${option} boletos es ${ticketsTotal}`)
-      addToCart(travel3)
+      answer = prompt(`El precio de ${option} boletos es ${ticketsTotal} ¿Desea Añadirlos al carrito? (elija si o no)`).toLowerCase();
+      if (answer == "no"){
+        alert("No hay problema, elija otra provincia que le guste aun más");
+      }else if(answer == "si"){
+        addToCart(travel3);
+      }else{
+        alert("escriba si o no para continuar");
+      }
     break;
     case 7:
       option = parseInt(prompt(`Que Bien, elegiste San Juan con un costo de $3500 por boleto,¿Cuántos boletos desea?`));
       ticketsTotal= 0;
       ticketsTotal+= manyOfTickets(option, 3000)
-      alert(`El precio de ${option} boletos es ${ticketsTotal}`)
-      addToCart(travel5)
+      answer = prompt(`El precio de ${option} boletos es ${ticketsTotal} ¿Desea Añadirlos al carrito? (elija si o no)`).toLowerCase();
+      if (answer == "no"){
+        alert("No hay problema, elija otra provincia que le guste aun más");
+      }else if(answer == "si"){
+        addToCart(travel5);
+      }else{
+        alert("escriba si o no para continuar");
+      }
     break;
     case 8:
       option = parseInt(prompt(`Que Bien, elegiste Santa Cruz con un costo de $3500 por boleto,¿Cuántos boletos desea?`));
       ticketsTotal= 0;
       ticketsTotal+= manyOfTickets(option, 3000)
-      alert(`El precio de ${option} boletos es ${ticketsTotal}`)
-      addToCart(travel4)
+      answer = prompt(`El precio de ${option} boletos es ${ticketsTotal} ¿Desea Añadirlos al carrito? (elija si o no)`).toLowerCase();
+      if (answer == "no"){
+        alert("No hay problema, elija otra provincia que le guste aun más");
+      }else if(answer == "si"){
+        addToCart(travel4);
+      }else{
+        alert("escriba si o no para continuar");
+      }
     break;
     case 9:
       alert("OH! Ya no tenemos vuelos para este destino")
@@ -192,8 +235,8 @@ function choseTravel(){
 }
 
 // Function to buy travel tickets
-function buyTravels(){
-  agree = prompt(`¡¡FELICITACIONES!! Estar por adquirir ${option} boletos para viajar y explorar ${buyTravels.travelName}
+function buyTravels(travelOptions){
+  agree = prompt(`¡¡FELICITACIONES!! Estar por adquirir ${option} boletos para viajar y explorar ${travelOptions.travelName}
   ¿Desea realizar la compra? (elegir si o no)`).toLowerCase();
 
   if(agree == "si"){
@@ -250,9 +293,9 @@ do{
         if (cart == ""){
           alert("Todavía no has seleccionado ningun destino");
         }else{
-          totalPrice= totalPriceTravel(ticketsTotal)
+          totalPrice= totalPriceTravel(ticketsTotal, travelOptions.travelPrice)
           alert(`Agregaste ${option} boletos para el destino ${cart} con un total de $${totalPrice}`);
-          buyTravels();
+          buyTravels(travelOptions);
         }
         break;
       default:
