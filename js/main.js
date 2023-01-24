@@ -4,10 +4,6 @@ let cart = [];
 let ticketsTotal = 0;
 let option = 0;
 
-// setTimeout(() => {
-// const nombre = prompt("Bienvenid@!! ingrese su nombre");
-// alert(nombre + ", " + "Elija su destino, luego indique la cantidad de boletos que quiere comprar y para finalizar esa operacion y tener reservado sus boletos aprete 0");
-
 
 class travels {
   constructor(travelNum, travelName, travelPrice, travelStars) {
@@ -174,8 +170,7 @@ do{
   2) Información de los destinos
   3) Buscar un destino en particular
   4) Ordenar viajes
-  5) filtrar por cantidad de estrellas
-  6) Ver carrito
+  5) Ver carrito
   0) Salir del menu`));
 
   switch (election){
@@ -196,9 +191,6 @@ do{
       sortTravel(); 
       break;
     case 5:
-      alert("todavía no se como armar el filtro");
-      break;
-    case 6:
         if (cart == ""){
           alert("Todavía no has seleccionado ningun destino");
         }else{
@@ -208,6 +200,8 @@ do{
           buyTravels(cart);
         }; break;
 
-    default: alert("Ingrese una opcion valida (del 1 a 6 o' 0 para salir del menu)."); break;
+    default:
+      alert("Ingrese una opcion valida (del 1 a 6 o' 0 para salir del menu).");
+      break;
   }
 } while (!exit);
