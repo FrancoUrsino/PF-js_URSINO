@@ -1,0 +1,32 @@
+.travels{
+  width: 100%;
+  display: grid;
+  overflow: hidden;
+  
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    gap: 2em;
+    overflow: hidden;
+    justify-content: center;
+    margin: 10px 0;
+
+    &--container{
+      display: grid;
+      justify-content: center;
+      
+      .popular__card--btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3px;
+        
+        &--btn{
+          padding: 5px 10px;
+          border: 1px solid rgb(67, 167, 73);
+          justify-self: center;
+        }
+      }
+    }
+  }
+}

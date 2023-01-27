@@ -22,18 +22,8 @@ button {
   text-transform: uppercase;
 }
 
-.nav {
-  background-color: rgba(255, 255, 255, 0.315);
-}
-.nav__logo {
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  margin-top: 7px;
-}
-.nav__menu {
-  background-color: rgba(255, 255, 255, 0.315);
-  backdrop-filter: blur(2px);
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
 }
 
 .header {
@@ -43,6 +33,179 @@ button {
   background-size: cover;
   width: 100%;
   height: 73vh;
+  overflow: hidden;
+}
+
+.nav {
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.315);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-family: "Aboreto", cursive;
+  font-size: 20px;
+}
+.nav__logo {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 5px 0;
+}
+.nav__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__menu--list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+}
+.nav__menu--item {
+  padding: 0 15px;
+  position: relative;
+}
+.nav__menu--link {
+  color: rgb(107, 183, 74);
+  transition: 0.4s, easy-in-out;
+}
+.nav__menu--link:hover {
+  color: white;
+}
+.nav__menu .active {
+  color: white;
+}
+.nav__menu .active::after, .nav__menu--link:hover::after {
+  content: "";
+  color: white;
+  width: 30%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: -4px;
+  left: 15px;
+}
+.nav__menuIcon {
+  display: none;
+  margin: auto;
+  font-size: 24px;
+}
+
+#nav.open {
+  right: 0;
+}
+
+#closeMenu {
+  display: none;
+}
+
+@media (max-width: 799px) {
+  .nav__menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(42, 42, 42, 0.5);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.2);
+    padding: 80px 0 0 10px;
+    transition: 0.45s;
+  }
+  .nav__menu--list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .nav__menu--item {
+    margin-bottom: 25px;
+    padding-left: 5px;
+  }
+  .nav__menu--item:last-of-type {
+    display: none;
+  }
+  .nav__menuIcon {
+    display: flex;
+    margin: auto;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  .nav__menuIcon--cart {
+    margin-right: 10px;
+    color: rgb(37, 37, 37);
+  }
+  .nav #closeMenu {
+    display: initial;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: white;
+  }
+}
+.modal__container {
+  width: 40%;
+  margin-left: 30em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: rgba(42, 42, 42, 0.5);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  overflow: hidden;
+  z-index: 2;
+  top: 5vh;
+  scrollbar-color: none;
+}
+.modal__container::-webkit-scrollbar {
+  display: none;
+}
+.modal__container .modal__header {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(42, 42, 42, 0.5);
+  color: white;
+  width: 100%;
+}
+.modal__container .modal__header .modal__title {
+  justify-content: start;
+}
+.modal__container .modal__header .modal__button {
+  cursor: pointer;
+}
+.modal__container .modal__cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  margin: 5px;
+}
+.modal__container .modal__cont--img {
+  width: 130px;
+  height: 110px;
+  object-fit: contain;
+}
+.modal__container .modal__cont--img--img {
+  width: 120px;
+  height: 100px;
+}
+.modal__container .modal__cont--travel {
+  display: grid;
+  grid-template-columns: 2fr repeat(2, 1fr);
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+  width: 80%;
+  color: white;
 }
 
 .travel {
@@ -97,7 +260,7 @@ button {
 }
 
 .popular {
-  width: 80%;
+  width: 85%;
   margin: 15px auto;
 }
 .popular__container--list {
@@ -151,6 +314,35 @@ button {
 .popular__card--container--title {
   font-size: 1.4rem;
   font-weight: bolder;
+}
+
+.travels {
+  width: 100%;
+  display: grid;
+  overflow: hidden;
+}
+.travels__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  gap: 2em;
+  overflow: hidden;
+  justify-content: center;
+  margin: 10px 0;
+}
+.travels__container--container {
+  display: grid;
+  justify-content: center;
+}
+.travels__container--container .popular__card--btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3px;
+}
+.travels__container--container .popular__card--btn--btn {
+  padding: 5px 10px;
+  border: 1px solid rgb(67, 167, 73);
+  justify-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */
