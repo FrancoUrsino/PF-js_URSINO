@@ -1,10 +1,11 @@
 .nav{
   backdrop-filter: blur(3px);
-  background-color: rgba(255, 255, 255, 0.315);
+  // background-color: rgba(255, 255, 255, 0.4);
+  background-color:  rgba(42, 42, 42, 0.5);
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  font-family: 'Aboreto', cursive;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  font-family: $aboreto;
   font-size: 20px;
   // position: sticky;
   // top: 0;
@@ -17,6 +18,7 @@
     align-items: center;
     margin: 0;
     padding: 5px 0;
+    color: $white;
   }
   &__menu{
     display: flex;
@@ -36,7 +38,7 @@
     }
 
     &--link{
-      color: rgb(107, 183, 74);
+      color: $skyBlue;
       transition: $transition;
       &:hover{
         color: $white;
@@ -56,6 +58,22 @@
       position: absolute;
       bottom: -4px;
       left: 15px;
+    }
+
+    &--link--cart{
+      font-size: 27px;
+    }
+
+    .nav__menu--cart{
+      background-color: rgba(255, 255, 255, 0.5);
+      color: transparent;
+      border-radius: 50px;
+      font-size: 5px;
+      padding: 4px;
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      display: none;
     }
   }
 

@@ -1,7 +1,9 @@
 let cart = [];
-const showCart = document.querySelector('#cart');
+const showCart = document.querySelector('.cartID');
 const modalContainer = document.querySelector('#modalContainer');
 const modalButton = document.querySelector('#modalButton');
+const cartQuant = document.querySelector('#cartQuant');
+
 
 
 const showModalCart = () => {
@@ -27,9 +29,9 @@ const showModalCart = () => {
         <img src="${travel.img}" alt="" class="modal__cont--img--img img__cart">
       </div>
       <div class="modal__cont--travel">
-        <p class="modal__cont--travel--name">Destino ${travel.name}</p>
+        <p class="modal__cont--travel--name">Destino: ${travel.name}</p>
         <p class="modal__cont--travel">Precio $${travel.price}</p>
-        <p class="modal__cont--travel">Boletos ${travel.quan}</p>
+        <p class="modal__cont--travel">Boletos: ${travel.quan}</p>
       </div>
     `
   modalContainer.append(cartContent);
@@ -40,7 +42,10 @@ const showModalCart = () => {
   cartContent.append(deleteTravel);
   deleteTravel.addEventListener('click', deleteTravelSelect)
   });
-  const modalTotal = cart.reduce((acc, item) => acc + item.price , 0);
+
+
+  const modalTotal = cart.reduce((acc, item) => acc + item.price * item.quan, 0);
+
 
   const totalPriceBuy = document.createElement("div")
   totalPriceBuy.className = "total__container";
@@ -56,5 +61,11 @@ const deleteTravelSelect = () =>{
   cart = cart.filter((cartId)=>{
     return cartId != travelId;
   });
+  cartNum();
   showModalCart();
 };
+
+const cartNum = () => {
+  cartQuant.style.display = "block";
+  cartQuant.innerText = cart.length;
+}

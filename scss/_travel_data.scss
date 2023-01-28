@@ -1,6 +1,8 @@
 .travel{
-  background-color: rgb(67, 167, 73);
+  background-color: $skyBlue;
   padding-block: 20px;
+  font-family: $sofiaSans;
+  font-size: 20px;
   
 
   &__form{
@@ -12,21 +14,22 @@
       grid-template-rows: repeat(2, 1fr);
 
       &--label{
-        color: rgb(255, 255, 255);
+        color: $white;
         font-size: 20px;
         margin: 0 0 0 5px;
         padding-left: 10px;
+        font-size: 25px;
       }
       
       &--input{
-        background-color: white;
+        background-color: $white;
         border-radius: 50px;
         border: transparent;
         padding: 5px 15px;
         font-size: 23px;
         
         &::placeholder{
-          color: rgba(169, 169, 169, 0.605);
+          color: rgba(214, 214, 214, 0.605);
         }
       }
     }

@@ -8,71 +8,49 @@ const travels = [
   {id: 7, name: "Mendoza", price: 2000, img: "img/Mendoza.jpg", stars: 3, quan: 1, desc: "hola a todos",},
 ]
 
-const travelsContainer = document.getElementById('#travelsContainer');
-
-
-// opcion 1
-
-// travels.forEach((travel) => {
-//   const{id, name, price, img, stars, quan, desc} = travel
-//   container.innerHTML += 
-//   `
-//   <div class="travels__container--container">
-//     <div class="popular__card">
-//       <img src="${img}" alt="" class="popular__card--img">
-//       <div class="popular__card--container">
-//         <div class="popular__card--container--stars">
-//           <i class="bi bi-star-fill"></i>
-//           <i class="bi bi-star-fill"></i>
-//           <i class="bi bi-star-fill"></i>
-//           <i class="bi bi-star-fill"></i>
-//           <i class="bi bi-star-fill"></i>
-//         </div>
-//         <h3 class="popular__card--container--title">${name}</h3>
-//         <p class="popular__card--container--text">${desc}</p>
-//         <h4 class="popular__card--container--site">$${price}</h4>
-//       </div>
-//     </div>
-//     <div class="popular__card--btn">
-//     <button onclick="addTravel(${id})" class="popular__card--btn--btn" id="buyButton">Agregar Viaje</button>
-//     </div>
-//   </div>
-//   `
-// });
-
+const travelsContainer = document.querySelector('#travelsContainer');
 
 // opcion 2
 travels.forEach((travel) => {
   let content = document.createElement("div");
   content.innerHTML =
   `
-    <img src="${img}" class="travels__card--img">
+  <div class="travels__container--container">
+    <img src="${travel.img}" class="travels__card--img">
     <div class="travels__card--container">
-      <h3 class="travels__card--container--title">${name}</h3>
-      <p class="travels__card--container--description">${desc}</p>
-      <p class="travels__card--container--price">${price}</p>
+      <h3 class="travels__card--container--title">${travel.name}</h3>
+      <p class="travels__card--container--description">${travel.desc}</p>
+      <p class="travels__card--container--price">$${travel.price}</p>
+
     </div>
+  </div>
   `;
-  travelsContainer.append(content)
-});
+  travelsContainer.append(content);
 
-function addTravel(id){
-  const travelOption = travels.find((travel)=> travel.id == id)
+  let buyOption = document.createElement('button');
+  buyOption.innerHTML =`Agregar Destino`
+  content.append(buyOption)
 
-  const repeatTravel = cart.some((repeat) => repeat.id === travels.id);
-  if (repeatTravel === true){
-    cart.map((travel)=> {
-      if(travel.id === travels.id){
-        travel.quan++;
+  buyOption.addEventListener('click', ()=>{
+
+  
+  const repeatTravel = cart.some((repeatOption)=> repeatOption.id === travel.id);
+  if(repeatTravel === true){
+    cart.map((option)=>{
+      if(option.id === travel.id){
+        option.quan++;
       }
-    })
+    });
   }else{
     cart.push({
-      id: travelOption.id,
-      img: travelOption.img,
-      name: travelOption.name,
-      price: travelOption.price,
-      quan: travelOption.quan,
+      id: travel.id,
+      img: travel.img,
+      name: travel.name,
+      price: travel.price,
+      quan: travel.quan,
     });
   }
-};
+    console.log(cart);
+    cartNum();
+  });
+});

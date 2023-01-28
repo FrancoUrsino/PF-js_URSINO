@@ -1,6 +1,35 @@
 .popular{
-  width: 85%;
+  width: 95%;
   margin: 15px auto;
+
+  &__container--title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    color: $lazyBlue;
+    text-transform: uppercase;
+    margin: 25px 0;
+    font-family: $sofiaSans;
+    font-weight: 400;
+    letter-spacing: 3px;
+    
+
+  }
+  &__container--text{
+    color: $black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    line-height: 25px;
+    letter-spacing: 1px;
+    width: 80%;
+    margin: 5px auto;
+    font-family: $sofiaSans;
+    font-size: 22px;
+    font-weight: 300;
+  }
 
   &__container--list{
     display: grid;
@@ -8,6 +37,7 @@
     gap: 2em;
     overflow: hidden;
     justify-content: center;
+    justify-items: center;
     margin: 10px 0;
   }
 
@@ -51,13 +81,14 @@
       }
 
       &--site{
-        font-size: 15px;
+        font-size: 13px;
         font-weight: bolder;
+        margin-bottom: 4px;
       }
 
       &--title{
-        font-size: 1.4rem;
-        font-weight: bolder;
+        font-size: 1.2rem;
+        font-family: $aboreto;
       }
     }
   }
