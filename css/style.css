@@ -627,11 +627,13 @@ h1, h2, h3, h4, h5, h6, p {
 
 .filters {
   width: 100%;
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
 }
 .filters__container {
   width: 80%;
   margin: 7px auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, auto));
   justify-content: center;
   align-items: center;
   gap: 2em;

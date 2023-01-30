@@ -1,10 +1,12 @@
 .filters{
   width: 100%;
+  font-family: $sofiaSans;
   
   &__container{
     width: 80%;
     margin: 7px auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto));
     justify-content: center;
     align-items: center;
     gap: 2em;
@@ -29,3 +31,11 @@
     background-color: $lazyBlue;
     color: $white;
   }
+
+
+// @media (min-width:360px){
+//   .filters__container{
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+//   }
+// }

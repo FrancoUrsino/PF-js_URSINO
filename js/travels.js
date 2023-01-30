@@ -20,7 +20,7 @@ function takeTravels (choseTravels){
     let content = document.createElement("div");
     content.innerHTML =
     `
-    <div class="travels__container--container">
+    <div class="travels__container--container" id="travelCard">
       <img src="${travel.img}" class="travels__card--img">
       <div class="travels__card--container">
         <h3 class="travels__card--container--title">${travel.name}</h3>
