@@ -5,8 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2° Pre entrega</title>
-  <!-- LINK FONT -->
-
   <!-- LINK BOOTSTRAR ICONS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <!-- LINK BOOTSTRAP CSS CDN -->
@@ -23,57 +21,26 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <nav class="nav">
+    <p class="nav__logo"><img src="img/svg/plane.svg" alt="">DISC.OVER Arg</p>
+    <div class="nav__menu" id="nav">
+      <ul class="nav__menu--list">
+        <li class="nav__menu--item"><a href="" class="nav__menu--link active">Inicio</a></li>
+        <li class="nav__menu--item"><a href="" class="nav__menu--link">Acerca de</a></li>
+        <li class="nav__menu--item"><a href="" class="nav__menu--link">Destinos populares</a></li>
+        <li class="nav__menu--item"><a href="" class="nav__menu--link">contactanos</a></li>
+        <li class="nav__menu--item"><p class="nav__menu--link nav__menu--link--cart cartID" id="cart"><i class="bi bi-cart3"></i><span id="cartQuant" class="nav__menu--cart"></span></p></li>
+        <a href="" id="closeMenu" ><i class="bi bi-x-lg"></i></a>
+      </ul>
+    </div>
+    <div id="navMenu" class="nav__menuIcon">
+      <p href="#" class="nav__menuIcon--cart cartID" id="cartMobile"><i class="bi bi-cart3"></i><span id="cartQuant" class="nav__menu--cart"></span></p>
+      <i class="bi bi-text-indent-left" id="navMenuIcon"></i>
+    </div>
+  </nav>
   <header class="header">
-    <nav class="nav">
-      <p class="nav__logo"><img src="img/svg/plane.svg" alt="">DISC.OVER Arg</p>
-      <div class="nav__menu" id="nav">
-        <ul class="nav__menu--list">
-          <li class="nav__menu--item"><a href="" class="nav__menu--link active">Inicio</a></li>
-          <li class="nav__menu--item"><a href="" class="nav__menu--link">Acerca de</a></li>
-          <li class="nav__menu--item"><a href="" class="nav__menu--link">Destinos populares</a></li>
-          <li class="nav__menu--item"><a href="" class="nav__menu--link">contactanos</a></li>
-          <li class="nav__menu--item"><p class="nav__menu--link nav__menu--link--cart cartID" id="cart"><i class="bi bi-cart3"></i><span id="cartQuant" class="nav__menu--cart"></span></p></li>
-          <a href="" id="closeMenu" ><i class="bi bi-x-lg"></i></a>
-        </ul>
-      </div>
-      <div id="navMenu" class="nav__menuIcon">
-        <p href="#" class="nav__menuIcon--cart cartID" id="cartMobile"><i class="bi bi-cart3"></i><span id="cartQuant" class="nav__menu--cart"></span></p>
-        <i class="bi bi-text-indent-left" id="navMenuIcon"></i>
-      </div>
-    </nav>
   </header>
 <main>
-  <!-- TRAVEL INFO -->
-<section class="travel">
-  <div class="travel__container">
-    <form action="" class="travel__form">
-      <!-- DESTINATION -->
-      <div class="travel__form--container">
-        <label for="destination" class="travel__form--container--label">Destino</label>
-        <input type="search" name="destination" id="destination" class="travel__form--container--input" placeholder="Busque su destino">
-      </div>
-      <!-- PEOPLE -->
-      <div class="travel__form--container">
-        <label for="people" class="travel__form--container--label">N° de Pasajeros</label>
-        <input type="text" name="people" id="people" class="travel__form--container--input" placeholder="N° de pasajeros">
-      </div>
-      <!-- CHECKIN -->
-      <div class="travel__form--container">
-        <label for="checkin" class="travel__form--container--label">CheckIn</label>
-        <input type="date" name="checkin" id="checkin" required class="travel__form--container--input">
-      </div>
-      <!-- CHECKOUT -->
-      <div class="travel__form--container">
-        <label for="checkout" class="travel__form--container--label">CheckOut</label>
-        <input type="date" name="checkout" id="checkout" required class="travel__form--container--input" >
-      </div>
-    </form>
-    <div class="travel__btn">
-      <button type="submit" class="travel__btn--btn">Buscar Destino</button>
-    </div>
-  </div>
-</section>
-
 <!-- MODAL -->
 <div id="modalContainer" class="modal__container"></div>
 
@@ -142,15 +109,16 @@
           </div>
         </li>
       </ul>
+      <button class="popular__container--btn"><a href="travels.html">Ver todos los destinos</a></button>
     </div>
   </section>
 
   <!-- TRAVELS -->
-  <section class="travels">
+  <!-- <section class="travels">
     <h2 class="travels__title">Viajes</h2>
     <p class="travels__text">Conoce todas las provincias Argentinas para llenarte de sus culturas y miles de historias que tienen los residentes de cada una</p>
     <div class="travels__container mt-5" id="travelsContainer"></div>
-  </section>
+  </section> -->
 
   <!-- PACKEGES -->
   <section class="packeges">

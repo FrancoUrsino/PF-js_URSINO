@@ -1,5 +1,5 @@
 .popular{
-  width: 95%;
+  width: 100%;
   margin: 15px auto;
 
   &__container--title{
@@ -31,6 +31,34 @@
     font-weight: 300;
   }
 
+  &__container--btn{
+    font-family: $sofiaSans;
+    display: flex;
+    border: 2px solid $lazyBlue;
+    border-radius: 50px;
+    padding: 3px 15px;
+    justify-self: center;
+    margin: auto;
+    transition: $transition;
+    
+    & a{
+      font-size: 25px;
+      color: $lazyBlue;
+      text-shadow: 1px 1px 4px $skyBlue;
+
+      &:hover{
+        color: $white;
+        text-shadow: 1px 1px 4px $gray;
+      }
+    }
+      
+    &:hover{
+      background-color: $lazyBlue;
+      border: 2px solid transparent;
+    }
+
+  }
+
   &__container--list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto));
@@ -39,6 +67,7 @@
     justify-content: center;
     justify-items: center;
     margin: 10px 0;
+    padding: 0;
   }
 
   &__container--list, &__container--list > .popular__container--list--item:not(:last-child){

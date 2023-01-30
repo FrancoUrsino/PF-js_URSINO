@@ -1,6 +1,6 @@
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 const showCart = document.querySelector('.cartID');
-const modalContainer = document.querySelector('#modalContainer');
+const modalContainer = document.querySelector('.modal__container');
 const modalButton = document.querySelector('#modalButton');
 const cartQuant = document.querySelector('#cartQuant');
 
@@ -30,17 +30,40 @@ const showModalCart = () => {
       </div>
       <div class="modal__cont--travel">
         <p class="modal__cont--travel--name">Destino: ${travel.name}</p>
-        <p class="modal__cont--travel">Precio $${travel.price}</p>
-        <p class="modal__cont--travel">Boletos: ${travel.quan}</p>
+        <p class="modal__cont--travel--price">Precio $${travel.price}</p>
+        <div class="modal__cont--travel--container">
+          <span class="more">+</span>
+          <p class="modal__cont--travel--container--quan">Boletos: ${travel.quan}</p>
+          <span class="less">-</span>
+        </div>
+        <div class="modal__cont--travel">
+        <button class="modal__cont--deleteTravel"><i class="bi bi-x-lg"></i></button>
+        </div>
       </div>
     `
   modalContainer.append(cartContent);
 
-  let deleteTravel = document.createElement("button");
-  deleteTravel.innerHTML = `<i class="bi bi-x-lg"></i>`
-  deleteTravel.className = "modal__cont--deleteTravel";
-  cartContent.append(deleteTravel);
-  deleteTravel.addEventListener('click', deleteTravelSelect)
+
+  // add o kick travel for the cart
+  let more = cartContent.querySelector(".more")
+    more.addEventListener('click', ()=>{
+      travel.quan++;
+      saveLocal();
+      showModalCart();
+    });
+  let less = cartContent.querySelector(".less");
+  less.addEventListener('click', ()=>{
+    if(travel.quan !== 1){
+      travel.quan--;
+    }
+    saveLocal();
+    showModalCart();
+  });
+
+  let deleteTravel = cartContent.querySelector(".modal__cont--deleteTravel");
+    deleteTravel.addEventListener('click', ()=> {
+      deleteTravelSelect(travel.id);
+    });
   });
 
 
@@ -55,17 +78,24 @@ const showModalCart = () => {
 
 showCart.addEventListener('click', showModalCart);
 
-const deleteTravelSelect = () =>{
-  const travelId = cart.find((travel) => travel.id)
+const deleteTravelSelect = (id) =>{
+  const travelId = cart.find((travel) => travel.id === id);
 
   cart = cart.filter((cartId)=>{
     return cartId != travelId;
   });
   cartNum();
+  saveLocal();
   showModalCart();
 };
 
 const cartNum = () => {
   cartQuant.style.display = "block";
-  cartQuant.innerText = cart.length;
-}
+
+  const cartNumLocal = cart.length;
+  localStorage.setItem("cartLength", JSON.stringify(cartNumLocal));
+
+  cartQuant.innerText = JSON.parse(localStorage.getItem("cartNumLocal"));
+};
+
+cartNum();
