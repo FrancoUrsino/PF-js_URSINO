@@ -12,13 +12,22 @@
     justify-content: center;
     margin: 10px 0;
 
+    .travels__buyTravel{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid $lazyBlue;
+      border-radius: 25px;
+      margin: 10px auto 0;
+      padding: 7px 15px;
+    }
+
     &--container{
       position: relative;
       overflow: hidden;
       border-radius: 25px;
       height: 550px;
       width: 360px;
-
       
       .travels__card--img{
         width: 100%;
@@ -68,3 +77,4 @@
     }
   }
 }
+

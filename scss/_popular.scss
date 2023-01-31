@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem;
+    font-size: 2rem;
     color: $lazyBlue;
     text-transform: uppercase;
     margin: 25px 0;
@@ -120,5 +120,11 @@
         font-family: $aboreto;
       }
     }
+  }
+}
+
+@media (min-width: 550px){
+  .popular__container--title{
+    font-size: 3.4rem;
   }
 }
