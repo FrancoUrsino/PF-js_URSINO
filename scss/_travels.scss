@@ -3,6 +3,24 @@
   display: grid;
   overflow: hidden;
   grid-area: travels;
+
+  &__title{
+    display: flex;
+    justify-content: center;
+    font-size: 2.3rem;
+    color: $lazyBlue;
+    font-family: $sofiaSans;
+    font-weight: 400;
+    margin: 10px 0;
+  }
+
+  &__text{
+    font-family: $sofiaSans;
+    font-size: 20px;
+    color: $gray;
+    display: flex;
+    text-align: center;
+  }
   
   &__container{
     display: grid;

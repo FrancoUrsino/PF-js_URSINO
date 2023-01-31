@@ -1,15 +1,11 @@
 .nav{
   backdrop-filter: blur(3px);
-  // background-color: rgba(255, 255, 255, 0.4);
   background-color:  rgba(42, 42, 42, 0.5);
   display: flex;
   justify-content: space-between;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   font-family: $aboreto;
   font-size: 20px;
-  // position: sticky;
-  // top: 0;
-  // left: 0;
   z-index: 1;
 
   &__logo{
@@ -121,9 +117,9 @@
         margin-bottom: 25px;
         padding-left: 5px;
 
-        &:last-of-type{
-          display: none;
-        }
+        // &:last-of-type{
+        //   display: none;
+        // }
       }
     }
     &__menuIcon{
@@ -131,11 +127,7 @@
       margin: auto;
       font-size: 24px;
       margin-right: 10px;
-
-      &--cart{
-        margin-right: 10px;
-        color: $black;
-      }
+      color: $white;
     }
 
     #closeMenu{

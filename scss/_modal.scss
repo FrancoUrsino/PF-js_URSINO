@@ -79,3 +79,10 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 799px){
+  .modal__container{
+    width: 80%;
+    margin-left: 3em;
+  }
+}
