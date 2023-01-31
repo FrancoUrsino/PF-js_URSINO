@@ -70,7 +70,7 @@ function takeTravels (choseTravels){
       console.log(cart);
       cartNum();
       saveLocal();
-      // showModalCart();
+      alert(`Añadiste el destino ${travel.name} al carrito, desde ahí vas a poder elegir la cantidad de boletos o eliminarlo`);
     });
   });
 }
