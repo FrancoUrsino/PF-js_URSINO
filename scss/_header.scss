@@ -1,15 +1,37 @@
 .header{
-  background-image: url(../img/header.jpg);
-  background-position: center;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header.jpg);
+  background-position: center ;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
+
+    &--title{
+      font-size: 5rem;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.25);
+      text-shadow: 1px 2px 4px $lazyBlue;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+    }
+
+    &--text{
+      color: $white;
+      width: 80%;
+      margin:3em auto;
+    }
+  }
 }
 
-@media (max-width: 799px){
-  header{
-    overflow: hidden;
+@media (min-width: 899px){
+  .header__container--title{
+    font-size: 7rem;
   }
 }

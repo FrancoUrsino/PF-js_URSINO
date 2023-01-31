@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header {
-  background-image: url(../img/header.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,10 +35,29 @@ h1, h2, h3, h4, h5, h6, p {
   height: 100vh;
   overflow: hidden;
 }
+.header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+}
+.header__container--title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.25);
+  text-shadow: 1px 2px 4px rgb(108, 158, 214);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+}
+.header__container--text {
+  color: white;
+  width: 80%;
+  margin: 3em auto;
+}
 
-@media (max-width: 799px) {
-  header {
-    overflow: hidden;
+@media (min-width: 899px) {
+  .header__container--title {
+    font-size: 7rem;
   }
 }
 .nav {
