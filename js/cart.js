@@ -72,7 +72,7 @@ const showModalCart = () => {
 
   const totalPriceBuy = document.createElement("div")
   totalPriceBuy.className = "total__container";
-  totalPriceBuy.innerHTML = `Total a pagar $${modalTotal}`;
+  totalPriceBuy.innerHTML = `<p class="total__container--total">Total a pagar $${modalTotal}</p><button class="total__container--btn" id="finishBuyButton">COMPRAR DESTINOS</button>`;
   modalContainer.append(totalPriceBuy);
 };
 
@@ -99,3 +99,5 @@ const cartNum = () => {
 };
 
 cartNum();
+
+

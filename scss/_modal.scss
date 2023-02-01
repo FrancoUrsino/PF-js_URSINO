@@ -74,6 +74,30 @@
   }
 }
 
+.total__container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 5px;
+
+  &--total{
+    justify-content: center;
+    text-align: center;
+    padding-top: 4px;
+  }
+  
+  &--btn{
+    border: 1px solid $gray;
+    border-radius: 15px;
+    padding: 3px 7px;
+    color: $gray;
+
+    &:hover{
+      border: 1px solid $lazyBlue;
+      color: $lazyBlue;
+    }
+  }
+}
+
 .more, .less{
   cursor: pointer;
   display: flex;

@@ -22,30 +22,29 @@ categoryButton.forEach(button =>{
 
 const searchTravelInput = document.querySelector('#searchTravelInput');
 const searchTravelButton = document.querySelector('#searchTravelButton');
-const searchResult = document.querySelector('#travelsCard');
+const searchResult = document.querySelector('#searchTravels__container');
 
 const searchTravel = ()=> {
+  searchResult.innerHTML = "";
   const searchText = searchTravelInput.value.toLowerCase();
   for(let travelSearch of travels){
     let searchName = travelSearch.name.toLowerCase();
     if(searchName.indexOf(searchText) !== -1){
       searchResult.innerHTML +=
       `
-      <div class="travels__container--container" id="travelCard">
-        <img src="${searchText.img}" class="travels__card--img">
-        <div class="travels__card--container">
-          <h3 class="travels__card--container--title">${searchText.name}</h3>
-          <p class="travels__card--container--description">${searchText.desc}</p>
-          <p class="travels__card--container--price">$${searchText.price}</p>
+      <div class="searchTravels__card">
+        <img src="${travelSearch.img}" class="searchTravels__card--img">
+        <div class="searchTravels__card--container">
+          <h3 class="searchTravels__card--container--title">${travelSearch.name}</h3>
+          <p class="searchTravels__card--container--description">${travelSearch.desc}</p>
+          <p class="searchTravels__card--container--price">$${travelSearch.price}</p>
 
         </div>
       </div>
       `
     }
   }
-  if(searchResult.innerHTML === ''){
-    searchResult.innerText +=`Todavía no tenemos ese destino `
-  }
+  if(searchResult === ''){searchResult.innerText +=`Todavía no tenemos ese destino`}
 }
 
 searchTravelButton.addEventListener('click', searchTravel)

@@ -70,7 +70,12 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 20px;
   z-index: 1;
 }
-.nav__logo {
+.nav__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 50px;
+}
+.nav__container--logo {
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -78,33 +83,37 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 5px 0;
   color: white;
 }
-.nav__menu {
+.nav__container--menu {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-right: 10px;
 }
-.nav__menu--list {
+.nav__container--menu--list {
+  width: 95%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
 }
-.nav__menu--item {
-  padding: 0 15px;
+.nav__container--menu--item {
+  padding: 0 5px;
   position: relative;
 }
-.nav__menu--link {
+.nav__container--menu--link {
   color: rgb(124, 195, 231);
+  font-size: 20px;
   transition: 0.4s, easy-in-out;
 }
-.nav__menu--link:hover {
+.nav__container--menu--link:hover {
   color: white;
 }
-.nav__menu .active {
+.nav__container--menu .active {
   color: white;
 }
-.nav__menu .active::after, .nav__menu--link:hover::after {
+.nav__container--menu .active::after, .nav__container--menu--link:hover::after {
   content: "";
   color: white;
   width: 30%;
@@ -114,10 +123,17 @@ h1, h2, h3, h4, h5, h6, p {
   bottom: -4px;
   left: 15px;
 }
-.nav__menu--link--cart {
-  font-size: 27px;
+.nav__container--cart {
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 5px;
+  color: rgb(108, 158, 214);
 }
-.nav__menu .nav__menu--cart {
+.nav__container .nav__menu--cart {
   background-color: rgba(255, 255, 255, 0.5);
   color: white;
   border-radius: 50px;
@@ -125,7 +141,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 7px;
   position: absolute;
   top: 5px;
-  right: 15px;
+  right: 13px;
   display: none;
 }
 .nav__menuIcon {
@@ -136,14 +152,23 @@ h1, h2, h3, h4, h5, h6, p {
 
 #nav.open {
   right: 0;
+  margin: 0;
 }
 
 #closeMenu {
   display: none;
 }
 
-@media (max-width: 799px) {
-  .nav__menu {
+@media (max-width: 820px) {
+  .nav {
+    width: 100%;
+  }
+  .nav__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 50px 50px;
+  }
+  .nav__container--menu {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -159,13 +184,13 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 80px 0 0 10px;
     transition: 0.45s;
   }
-  .nav__menu--list {
+  .nav__container--menu--list {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
   }
-  .nav__menu--item {
+  .nav__container--menu--item {
     margin-bottom: 25px;
     padding-left: 5px;
   }
@@ -182,6 +207,9 @@ h1, h2, h3, h4, h5, h6, p {
     top: 15px;
     right: 10px;
     color: white;
+  }
+  .nav__container--cart .nav__menu--cart {
+    right: 73px;
   }
 }
 .modal__container {
@@ -247,6 +275,27 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .modal__container .modal__cont--travel .modal__cont--deleteTravel {
   color: white;
+}
+
+.total__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 5px;
+}
+.total__container--total {
+  justify-content: center;
+  text-align: center;
+  padding-top: 4px;
+}
+.total__container--btn {
+  border: 1px solid rgb(191, 191, 191);
+  border-radius: 15px;
+  padding: 3px 7px;
+  color: rgb(191, 191, 191);
+}
+.total__container--btn:hover {
+  border: 1px solid rgb(108, 158, 214);
+  color: rgb(108, 158, 214);
 }
 
 .more, .less {
@@ -687,6 +736,32 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .travels__container--container--btn {
   color: black;
+}
+
+.searchTravels__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.searchTravels__card--img {
+  width: 350px;
+  height: 550px;
+  object-fit: cover;
+  display: flex;
+  justify-self: flex-end;
+  margin-right: 20px;
+}
+.searchTravels__card--container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.searchTravels__card--container--title {
+  font-size: 40px;
+  color: rgb(108, 158, 214);
+  font-family: "Aboreto", cursive;
 }
 
 .filters {
