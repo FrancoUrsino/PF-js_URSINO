@@ -36,10 +36,11 @@ function takeTravels (choseTravels){
         <h3 class="travels__card--container--title">${travel.name}</h3>
         <p class="travels__card--container--description">${travel.desc}</p>
         <p class="travels__card--container--price">$${travel.price}</p>
-
       </div>
     </div>
     `;
+
+    const mergeAll = searchTravelButton.addEventListener('click', function searchTravel(){ travelsOut.style.display = "none";});
     travelsContainer.append(content);
 
     let buyOption = document.createElement('button');

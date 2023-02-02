@@ -18,11 +18,15 @@ categoryButton.forEach(button =>{
   })
 })
 
+
+
 // SEARCH
 
 const searchTravelInput = document.querySelector('#searchTravelInput');
 const searchTravelButton = document.querySelector('#searchTravelButton');
 const searchResult = document.querySelector('#searchTravels__container');
+const travelsOut = document.querySelector('#allDestinations');
+// const searchOut = document.querySelector('#btnCloseSearch');
 
 const searchTravel = ()=> {
   searchResult.innerHTML = "";
@@ -35,16 +39,25 @@ const searchTravel = ()=> {
       <div class="searchTravels__card">
         <img src="${travelSearch.img}" class="searchTravels__card--img">
         <div class="searchTravels__card--container">
+        <button class="travels__card--btn" id="btnCloseSearch"><i class="bi bi-x-lg"></i></button>
           <h3 class="searchTravels__card--container--title">${travelSearch.name}</h3>
           <p class="searchTravels__card--container--description">${travelSearch.desc}</p>
           <p class="searchTravels__card--container--price">$${travelSearch.price}</p>
-
         </div>
       </div>
       `
+
+      const searchOut = document.querySelector('#btnCloseSearch');
+
+      searchOut.addEventListener('click', ()=>{
+        searchResult.style.display = "none"
+        travelsOut.style.display = "grid"
+      });
+      searchResult.style.display= "grid"
     }
   }
-  if(searchResult === ''){searchResult.innerText +=`Todavía no tenemos ese destino`}
+  if(searchResult.innerHTML === ''){searchResult.innerText +=`Todavía no tenemos ese destino`}
 }
 
 searchTravelButton.addEventListener('click', searchTravel)
+
