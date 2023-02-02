@@ -1,6 +1,8 @@
 // FILTER
 
 const categoryButton = document.querySelectorAll('.filters__container--btn');
+const minMax = document.querySelector('#minMax');
+const maxMin = document.querySelector('#maxMin');
 
 categoryButton.forEach(button =>{
   button.addEventListener('click', (b) => {
@@ -15,8 +17,19 @@ categoryButton.forEach(button =>{
     }else{
       takeTravels(travels);
     }
-  })
-})
+  });
+});
+
+function minMaxTravels(travel){
+  minMax = [].concat(travel);
+  minMax.sort((t1, t2) => t1.price - t2.price);
+  takeTravels(travels)
+}
+function maxMinTravels(travel){
+  minMax = [].concat(travel);
+  minMax.sort((t1, t2) => t2.price - t1.price);
+  takeTravels(travels)
+}
 
 
 
@@ -26,7 +39,6 @@ const searchTravelInput = document.querySelector('#searchTravelInput');
 const searchTravelButton = document.querySelector('#searchTravelButton');
 const searchResult = document.querySelector('#searchTravels__container');
 const travelsOut = document.querySelector('#allDestinations');
-// const searchOut = document.querySelector('#btnCloseSearch');
 
 const searchTravel = ()=> {
   searchResult.innerHTML = "";

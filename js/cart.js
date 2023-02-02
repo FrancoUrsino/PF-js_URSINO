@@ -74,6 +74,13 @@ const showModalCart = () => {
   totalPriceBuy.className = "total__container";
   totalPriceBuy.innerHTML = `<p class="total__container--total">Total a pagar $${modalTotal}</p><button class="total__container--btn" id="finishBuyButton">COMPRAR DESTINOS</button>`;
   modalContainer.append(totalPriceBuy);
+
+  const finishBuyButton = document.querySelector('#finishBuyButton')
+  finishBuyButton.addEventListener('click', ()=>{
+    alert("FELICIDADES!!! YA COMPRASTE TUS BOLETOS") 
+    let cartContent = document.querySelector('.modal__cont');
+    cartContent.innerHTML = ""
+  });
 };
 
 showCart.addEventListener('click', showModalCart);

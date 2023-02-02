@@ -34,7 +34,6 @@ function takeTravels (choseTravels){
       <img src="${travel.img}" class="travels__card--img">
       <div class="travels__card--container">
         <h3 class="travels__card--container--title">${travel.name}</h3>
-        <p class="travels__card--container--description">${travel.desc}</p>
         <p class="travels__card--container--price">$${travel.price}</p>
       </div>
     </div>
