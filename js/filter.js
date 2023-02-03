@@ -20,17 +20,23 @@ categoryButton.forEach(button =>{
   });
 });
 
-function minMaxTravels(travel){
-  minMax = [].concat(travel);
-  minMax.sort((t1, t2) => t1.price - t2.price);
-  takeTravels(travels)
-}
-function maxMinTravels(travel){
-  minMax = [].concat(travel);
-  minMax.sort((t1, t2) => t2.price - t1.price);
-  takeTravels(travels)
-}
 
+for (let i = 0; i < travels.length; i++) {
+  travels[i].price = parseInt(travels[i].price)
+}
+minMax.addEventListener('click', () => {
+  travels.sort(function (a, b) {
+    return a.price - b.price
+  })
+  takeTravels(travels)
+})
+
+maxMin.addEventListener('click', () => {
+  travels.sort(function (a, b) {
+    return b.price - a.price
+  })
+  takeTravels(travels)
+})
 
 
 // SEARCH
