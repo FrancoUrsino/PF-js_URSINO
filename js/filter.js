@@ -4,17 +4,17 @@ const categoryButton = document.querySelectorAll('.filters__container--btn');
 const minMax = document.querySelector('#minMax');
 const maxMin = document.querySelector('#maxMin');
 
-categoryButton.forEach(button =>{
+categoryButton.forEach(button => {
   button.addEventListener('click', (b) => {
 
     categoryButton.forEach(button => button.classList.remove("active"))
     b.currentTarget.classList.add("active");
-    
 
-    if(b.currentTarget.id != "all"){
-      const categoryButtonChoise = travels.filter( travel => travel.stars === b.currentTarget.id);
+
+    if (b.currentTarget.id != "all") {
+      const categoryButtonChoise = travels.filter(travel => travel.stars === b.currentTarget.id);
       takeTravels(categoryButtonChoise);
-    }else{
+    } else {
       takeTravels(travels);
     }
   });
@@ -46,14 +46,14 @@ const searchTravelButton = document.querySelector('#searchTravelButton');
 const searchResult = document.querySelector('#searchTravels__container');
 const travelsOut = document.querySelector('#allDestinations');
 
-const searchTravel = ()=> {
+const searchTravel = () => {
   searchResult.innerHTML = "";
   const searchText = searchTravelInput.value.toLowerCase();
-  for(let travelSearch of travels){
+  for (let travelSearch of travels) {
     let searchName = travelSearch.name.toLowerCase();
-    if(searchName.indexOf(searchText) !== -1){
+    if (searchName.indexOf(searchText) !== -1) {
       searchResult.innerHTML +=
-      `
+        `
       <div class="searchTravels__card">
         <img src="${travelSearch.img}" class="searchTravels__card--img">
         <div class="searchTravels__card--container">
@@ -67,14 +67,14 @@ const searchTravel = ()=> {
 
       const searchOut = document.querySelector('#btnCloseSearch');
 
-      searchOut.addEventListener('click', ()=>{
+      searchOut.addEventListener('click', () => {
         searchResult.style.display = "none"
         travelsOut.style.display = "grid"
       });
-      searchResult.style.display= "grid"
+      searchResult.style.display = "grid"
     }
   }
-  if(searchResult.innerHTML === ''){searchResult.innerText +=`Todavía no tenemos ese destino`}
+  if (searchResult.innerHTML === '') { searchResult.innerText += `Todavía no tenemos ese destino` }
 }
 
 searchTravelButton.addEventListener('click', searchTravel)

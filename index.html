@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,10 +17,12 @@
   <!-- LINKS SOFIA SANS FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@200;300;400;600;700&display=swap"
+    rel="stylesheet">
   <!-- LINK CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header class="header">
     <nav class="nav">
@@ -28,13 +31,15 @@
         <div class="nav__container--menu" id="nav">
           <ul class="nav__container--menu--list">
             <li class="nav__container--menu--item"><a href="" class="nav__container--menu--link active">Inicio</a></li>
-            <li class="nav__container--menu--item"><a href="" class="nav__container--menu--link">Destinos populares</a></li>
+            <li class="nav__container--menu--item"><a href="" class="nav__container--menu--link">Destinos populares</a>
+            </li>
             <li class="nav__container--menu--item"><a href="" class="nav__container--menu--link">Paquetes</a></li>
             <li class="nav__container--menu--item"><a href="" class="nav__container--menu--link">contactanos</a></li>
-            <a href="" id="closeMenu" ><i class="bi bi-x-lg"></i></a>
+            <a href="" id="closeMenu"><i class="bi bi-x-lg"></i></a>
           </ul>
         </div>
-        <p class="nav__container--cart cartID" id="cart"><i class="bi bi-cart3"></i><span id="cartQuant" class="nav__menu--cart"></span></p>
+        <p class="nav__container--cart cartID" id="cart"><i class="bi bi-cart3"></i><span id="cartQuant"
+            class="nav__menu--cart"></span></p>
         <div id="navMenu" class="nav__menuIcon">
           <i class="bi bi-text-indent-left" id="navMenuIcon"></i>
         </div>
@@ -42,164 +47,197 @@
     </nav>
     <section class="header__container">
       <h1 class="header__container--title">DISC.OVER ARG</h1>
-      <p class="header__container--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam deserunt quasi odio labore, quo magnam inventore. Reiciendis ex quos facere quam natus ut illo sint quis amet obcaecati aspernatur distinctio pariatur, provident, magnam quibusdam dolores?</p>
+      <p class="header__container--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam deserunt
+        quasi odio labore, quo magnam inventore. Reiciendis ex quos facere quam natus ut illo sint quis amet obcaecati
+        aspernatur distinctio pariatur, provident, magnam quibusdam dolores?</p>
     </section>
   </header>
-<main>
-<!-- MODAL -->
-<div id="modalContainer" class="modal__container"></div>
+  <main>
+    <!-- MODAL -->
+    <div id="modalContainer" class="modal__container"></div>
 
 
-  <!-- POPULAR DESTINATIONS -->
-  <section class="popular" id="destinations">
-    <div class="popular__container">
-      <h2 class="popular__container--title">Destinos Populares</h2>
-      <p class="popular__container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse eaque, quasi dolorem minima culpa aliquid mollitia adipisci voluptatum quos non, doloribus praesentium corporis rem tempora excepturi eius consequuntur!<p>
-      <ul class="popular__container--list">
-        <!-- PLACE 1 -->
-        <li class="popular__container--list--item">
-          <div class="popular__card">
-            <img src="img/Monte-Fitz-Roy.jpg" alt="monte fitz roy" loading="lazy" class="popular__card--img">
-            <div class="popular__card--container">
-              <div class="popular__card--container--stars">
-                <!-- <i class="bi bi-star-half"></i>
+    <!-- POPULAR DESTINATIONS -->
+    <section class="popular" id="destinations">
+      <div class="popular__container">
+        <h2 class="popular__container--title">Destinos Populares</h2>
+        <p class="popular__container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse
+          eaque, quasi dolorem minima culpa aliquid mollitia adipisci voluptatum quos non, doloribus praesentium
+          corporis rem tempora excepturi eius consequuntur!
+        <p>
+        <ul class="popular__container--list">
+          <!-- PLACE 1 -->
+          <li class="popular__container--list--item">
+            <div class="popular__card">
+              <img src="img/Monte-Fitz-Roy.jpg" alt="monte fitz roy" loading="lazy" class="popular__card--img">
+              <div class="popular__card--container">
+                <div class="popular__card--container--stars">
+                  <!-- <i class="bi bi-star-half"></i>
                 <i class="bi bi-star-fill"></i>
                 <i class="bi bi-star"></i> -->
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <h4 class="popular__card--container--site">Santa Cruz</h4>
+                <h3 class="popular__card--container--title">Monte Fitz Roy</h3>
+                <p class="popular__card--container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore, aperiam?</p>
               </div>
-              <h4 class="popular__card--container--site">Santa Cruz</h4>
-              <h3 class="popular__card--container--title">Monte Fitz Roy</h3>
-              <p class="popular__card--container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aperiam?</p>
+            </div>
+          </li>
+          <!-- PLACE 2 -->
+          <li class="popular__container--list--item">
+            <div class="popular__card">
+              <img src="img/Faro-del-Fin-del-Mundo.jpg" alt="Faro del fin del mundo" loading="lazy"
+                class="popular__card--img">
+              <div class="popular__card--container">
+                <div class="popular__card--container--stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <h4 class="popular__card--container--site">Usuahia</h4>
+                <h3 class="popular__card--container--title">Faro del Fin del Mundo</h3>
+                <p class="popular__card--container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore, aperiam?</p>
+              </div>
+            </div>
+          </li>
+          <!-- PLACE 3 -->
+          <li class="popular__container--list--item">
+            <div class="popular__card">
+              <img src="img/Valle-de-la-Luna.jpg" alt="Valle de la Luna" loading="lazy" class="popular__card--img">
+              <div class="popular__card--container">
+                <div class="popular__card--container--stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <h4 class="popular__card--container--site">San Juan</h4>
+                <h3 class="popular__card--container--title">Valle de la Luna</h3>
+                <p class="popular__card--container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore, aperiam?</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <button class="popular__container--btn"><a href="travels.html">Ver todos los destinos</a></button>
+      </div>
+    </section>
+
+    <!-- PACKEGES -->
+    <section class="packeges">
+      <h2 class="packeges__title">Mira nuestros paquetes</h2>
+      <p class="packeges__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi earum quaerat adipisci
+        laborum laboriosam vero, error expedita illo temporibus voluptate. Repellat tempora voluptatum provident ut
+        error saepe maxime voluptas dolores!</p>
+      <div class="packeges__container">
+        <!-- 1st PACKEGE -->
+        <div class="packeges__container--container">
+          <div class="packeges__container--container--container">
+            <img src="img/Jujuy.jpg" alt="" class="packeges__container--container--container--img">
+            <div class="packeges__container--container--container--descrip">
+              <h3 class="packeges__container--container--container--descrip--title">Valle de los 7 colores</h3>
+              <p class="packeges__container--container--container--descrip--text">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Animi aliquam laudantium dolore commodi, fugiat a repellat sit deserunt quaerat
+                provident!</p>
+              <div class="packeges__container--container--container--descrip--container">
+                <div class="packeges__container--container--container--descript--container--info">
+                  <p>7D<span>/</span>6N</p>
+                </div>
+                <div class="packeges__container--container--container--descript--container--people">
+                  <p>4 <i class="bi bi-person-fill"></i></p>
+                </div>
+                <div class="packeges__container--container--container--descript--container--info">
+                  <p>Jujuy <i class="bi bi-geo-alt-fill"></i></p>
+                </div>
+              </div>
+            </div>
+            <div class="packeges__container--container--container--info">
+              <div class="packeges__container--container--container--info--container">
+                <p class="packeges__container--container--container--info--container--rev">(78 reviews)</p>
+                <p class="packeges__container--container--container--info--container--stars"><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></p>
+              </div>
+              <p class="packeges__container--container--container--info--price">$2750 <span>/por persona</span></p>
+              <button class="packeges__container--container--container--info--btn">Ver Más</button>
             </div>
           </div>
-        </li>
-        <!-- PLACE 2 -->
-        <li class="popular__container--list--item">
-          <div class="popular__card">
-            <img src="img/Faro-del-Fin-del-Mundo.jpg" alt="Faro del fin del mundo" loading="lazy" class="popular__card--img">
-            <div class="popular__card--container">
-              <div class="popular__card--container--stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
+        </div>
+
+        <!-- 2nd PACKEGE -->
+        <div class="packeges__container--container">
+          <div class="packeges__container--container--container">
+            <img src="img/misionesCat.jpg" alt="" class="packeges__container--container--container--img">
+            <div class="packeges__container--container--container--descrip">
+              <h3 class="packeges__container--container--container--descrip--title">Cataratas del Iguazú</h3>
+              <p class="packeges__container--container--container--descrip--text">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Animi aliquam laudantium dolore commodi, fugiat a repellat sit deserunt quaerat
+                provident!</p>
+              <div class="packeges__container--container--container--descrip--container">
+                <div class="packeges__container--container--container--descript--container--info">
+                  <p>5D<span>/</span>4N</p>
+                </div>
+                <div class="packeges__container--container--container--descript--container--people">
+                  <p>2 <i class="bi bi-person-fill"></i></p>
+                </div>
+                <div class="packeges__container--container--container--descript--container--info">
+                  <p>Misiones <i class="bi bi-geo-alt-fill"></i></p>
+                </div>
               </div>
-              <h4 class="popular__card--container--site">Usuahia</h4>
-              <h3 class="popular__card--container--title">Faro del Fin del Mundo</h3>
-              <p class="popular__card--container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aperiam?</p>
+            </div>
+            <div class="packeges__container--container--container--info">
+              <div class="packeges__container--container--container--info--container">
+                <p class="packeges__container--container--container--info--container--rev">(146 reviews)</p>
+                <p class="packeges__container--container--container--info--container--stars"><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></p>
+              </div>
+              <p class="packeges__container--container--container--info--price">$3400 <span>/por persona</span></p>
+              <button class="packeges__container--container--container--info--btn">Ver Más</button>
             </div>
           </div>
-        </li>
-        <!-- PLACE 3 -->
-        <li class="popular__container--list--item">
-          <div class="popular__card">
-            <img src="img/Valle-de-la-Luna.jpg" alt="Valle de la Luna" loading="lazy" class="popular__card--img">
-            <div class="popular__card--container">
-              <div class="popular__card--container--stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <h4 class="popular__card--container--site">San Juan</h4>
-              <h3 class="popular__card--container--title">Valle de la Luna</h3>
-              <p class="popular__card--container--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aperiam?</p>
-            </div>
-          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__img">DISC.OVER ARG</p>
+      <ul class="footer__list">
+        <li class="footer__text">2023&copy;DISC.OVER arg | All Rigths Reserved</li>
+        <li class="footer__text2">Diseño y Desarrollo por <a href="mailto:francooursinoo@gmail.com">Franco Ursino</a>
         </li>
       </ul>
-      <button class="popular__container--btn"><a href="travels.html">Ver todos los destinos</a></button>
-    </div>
-  </section>
-
-  <!-- PACKEGES -->
-  <section class="packeges">
-    <h2 class="packeges__title">Mira nuestros paquetes</h2>
-    <p class="packeges__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi earum quaerat adipisci laborum laboriosam vero, error expedita illo temporibus voluptate. Repellat tempora voluptatum provident ut error saepe maxime voluptas dolores!</p>
-    <div class="packeges__container">
-      <!-- 1st PACKEGE -->
-      <div class="packeges__container--container">
-        <div class="packeges__container--container--container">
-          <img src="img/Jujuy.jpg" alt="" class="packeges__container--container--container--img">
-          <div class="packeges__container--container--container--descrip">
-            <h3 class="packeges__container--container--container--descrip--title">Valle de los 7 colores</h3>
-            <p class="packeges__container--container--container--descrip--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aliquam laudantium dolore commodi, fugiat a repellat sit deserunt quaerat provident!</p>
-            <div class="packeges__container--container--container--descrip--container">
-              <div class="packeges__container--container--container--descript--container--info"><p>7D<span>/</span>6N</p></div>
-              <div class="packeges__container--container--container--descript--container--people"><p>4 <i class="bi bi-person-fill"></i></p></div>
-              <div class="packeges__container--container--container--descript--container--info"><p>Jujuy <i class="bi bi-geo-alt-fill"></i></p></div>
-            </div>
-          </div>
-          <div class="packeges__container--container--container--info">
-            <div class="packeges__container--container--container--info--container">
-              <p class="packeges__container--container--container--info--container--rev">(78 reviews)</p>
-              <p class="packeges__container--container--container--info--container--stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></p>
-            </div>
-            <p class="packeges__container--container--container--info--price">$2750 <span>/por persona</span></p>
-            <button class="packeges__container--container--container--info--btn">Ver Más</button>
-          </div>
-        </div>
-      </div>
-        
-      <!-- 2nd PACKEGE -->
-      <div class="packeges__container--container">
-        <div class="packeges__container--container--container">
-          <img src="img/misionesCat.jpg" alt="" class="packeges__container--container--container--img">
-          <div class="packeges__container--container--container--descrip">
-            <h3 class="packeges__container--container--container--descrip--title">Cataratas del Iguazú</h3>
-            <p class="packeges__container--container--container--descrip--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aliquam laudantium dolore commodi, fugiat a repellat sit deserunt quaerat provident!</p>
-            <div class="packeges__container--container--container--descrip--container">
-              <div class="packeges__container--container--container--descript--container--info"><p>5D<span>/</span>4N</p></div>
-              <div class="packeges__container--container--container--descript--container--people"><p>2 <i class="bi bi-person-fill"></i></p></div>
-              <div class="packeges__container--container--container--descript--container--info"><p>Misiones <i class="bi bi-geo-alt-fill"></i></p></div>
-            </div>
-          </div>
-          <div class="packeges__container--container--container--info">
-            <div class="packeges__container--container--container--info--container">
-              <p class="packeges__container--container--container--info--container--rev">(146 reviews)</p>
-              <p class="packeges__container--container--container--info--container--stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></p>
-            </div>
-            <p class="packeges__container--container--container--info--price">$3400 <span>/por persona</span></p>
-            <button class="packeges__container--container--container--info--btn">Ver Más</button>
-          </div>
-        </div>
+      <div class="footer__icons">
+        <a href="">
+          <img src="img/svg/gmail.svg" alt="" class="footer__icon">
+        </a>
+        <a href="" target="_blank">
+          <img src="img/svg/wpp.svg" alt="" class="footer__icon">
+        </a>
+        <a href="" target="_blank">
+          <img src="img/svg/instagram.svg" alt="" class="footer__icon">
+        </a>
       </div>
     </div>
-  </section>
+  </footer>
 
-</main>
-<footer class="footer">
-  <div class="footer__container">
-    <p class="footer__img">DISC.OVER ARG</p> 
-    <ul class="footer__list">
-      <li class="footer__text">2023&copy;DISC.OVER arg | All Rigths Reserved</li>
-      <li class="footer__text2">Diseño y Desarrollo por <a href="mailto:francooursinoo@gmail.com">Franco Ursino</a></li>
-    </ul>
-    <div class="footer__icons">
-      <a href="">
-        <img src="img/svg/gmail.svg" alt="" class="footer__icon">
-      </a>
-      <a href="" target="_blank">
-        <img src="img/svg/wpp.svg" alt="" class="footer__icon">
-      </a>
-      <a href="" target="_blank">
-        <img src="img/svg/instagram.svg" alt="" class="footer__icon">
-      </a>
-    </div>
-  </div>
-</footer>
-  
 
-<!-- LINK NAV JS -->
-<script src="js/nav.js"></script>
-<!-- LINKS JS -->
-<script src="js/travels.js"></script>
-<script src="js/cart.js"></script>
+  <!-- LINK NAV JS -->
+  <script src="js/nav.js"></script>
+  <!-- LINKS JS -->
+  <script src="js/travels.js"></script>
+  <script src="js/cart.js"></script>
 </body>
+
 </html>
