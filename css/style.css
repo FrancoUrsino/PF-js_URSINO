@@ -670,6 +670,8 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 10px 0;
 }
 .travels__text {
+  display: flex;
+  justify-content: center;
   font-family: "Sofia Sans Extra Condensed", sans-serif;
   font-size: 20px;
   color: rgb(191, 191, 191);
