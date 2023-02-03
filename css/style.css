@@ -43,6 +43,9 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 10em;
 }
 .header__container--title {
+  display: flex;
+  text-align: center;
+  justify-self: center;
   font-size: 5rem;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.25);
@@ -57,7 +60,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media (min-width: 899px) {
   .header__container--title {
-    font-size: 7rem;
+    font-size: 6.5rem;
   }
 }
 .nav {
