@@ -58,8 +58,37 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 3em auto;
 }
 
+.header__travels {
+  height: 75vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.header__travels--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+}
+.header__travels--container--title {
+  display: flex;
+  text-align: center;
+  justify-self: center;
+  font-size: 5rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.25);
+  text-shadow: 1px 2px 4px rgb(108, 158, 214);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+}
+
 @media (min-width: 899px) {
-  .header__container--title {
+  .header__container--title,
+.header__travels--container--title {
     font-size: 6.5rem;
   }
 }
@@ -695,20 +724,33 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 10px auto 0;
   padding: 7px 15px;
 }
-.travels__container--container {
+.travels__container--card {
   position: relative;
-  overflow: hidden;
-  border-radius: 25px;
+  width: 350px;
   height: 550px;
-  width: 360px;
+  margin: 10px 0;
 }
-.travels__container--container .travels__card--img {
+.travels__container--card--container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: 0.7s ease-in-out;
+}
+.travels__container--card .front {
+  transform: perspective(800px) rotateY(0deg);
+  transform-style: preserve-3d;
+  box-shadow: 0 5px 10px rgb(37, 37, 37);
+}
+.travels__container--card .front__img {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 30px;
 }
-.travels__container--container .travels__card--container {
+.travels__container--card .front__container {
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -719,19 +761,14 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 20px 10px;
   color: white;
 }
-.travels__container--container .travels__card--container--title {
+.travels__container--card .front__container--title {
   font-size: 30px;
   font-family: "Aboreto", cursive;
   display: flex;
   justify-content: center;
   text-align: center;
 }
-.travels__container--container .travels__card--container--description {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-.travels__container--container .travels__card--container--price {
+.travels__container--card .front__container--price {
   position: absolute;
   bottom: -10px;
   font-weight: bold;
@@ -739,8 +776,39 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: flex-end;
   color: rgb(255, 255, 255);
 }
-.travels__container--container--btn {
-  color: black;
+.travels__container--card .back {
+  transform: perspective(800px) rotateY(180deg);
+  transform-style: preserve-3d;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  backdrop-filter: blur(6px);
+  padding: 15px;
+  color: rgb(108, 158, 214);
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px rgb(37, 37, 37);
+}
+.travels__container--card .back__title {
+  font-family: "Aboreto", cursive;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.travels__container--card .back__description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.travels__container .travels__container--card:hover .front {
+  transform: perspective(800px) rotateY(180deg);
+  transform-style: preserve-3d;
+}
+.travels__container .travels__container--card:hover .back {
+  transform-style: preserve-3d;
+  transform: perspective(800px) rotateY(360deg);
 }
 
 .searchTravels__card {

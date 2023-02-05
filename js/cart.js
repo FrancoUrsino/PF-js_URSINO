@@ -76,7 +76,31 @@ const showModalCart = () => {
 
   const finishBuyButton = document.querySelector('#finishBuyButton')
   finishBuyButton.addEventListener('click', () => {
-    alert("FELICIDADES!!! YA COMPRASTE TUS BOLETOS")
+    // alert("FELICIDADES!!! YA COMPRASTE TUS BOLETOS")
+    swal("¿Quiere realizar la compra?", {
+      buttons: {
+        cancel: "No",
+        catch: {
+          text: "Si",
+          value: "si",
+        },
+        defeat: false,
+      },
+    })
+      .then((value) => {
+        switch (value) {
+
+          case "defeat":
+            break;
+
+          case "si":
+            swal("Felicidades!!", "Compraste tus pasajes", "success");
+            break;
+
+          default:
+            swal("OH Bueno", "Esperamos volar contigo la proxina", "error");
+        }
+      });
     let cartContent = document.querySelectorAll('.modal__cont');
     cartContent.forEach((cartC) => {
       cartC.remove();
@@ -84,8 +108,8 @@ const showModalCart = () => {
 
     modalTotal = 0;
     totalPriceBuy.innerHTML = `<p class="total__container--total">Total a pagar $${modalTotal}</p><button class="total__container--btn" id="finishBuyButton">COMPRAR DESTINOS</button>`;
-
   });
+  saveLocal();
 };
 
 showCart.addEventListener('click', showModalCart);

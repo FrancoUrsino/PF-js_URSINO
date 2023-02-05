@@ -21,15 +21,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body">
-  <header class="header">
+  <header class="header__travels">
     <nav class="nav">
       <div class="nav__container">
         <p class="nav__container--logo"><img src="img/svg/plane.svg" alt="">DISC.OVER Arg</p>
         <div class="nav__container--menu" id="nav">
           <ul class="nav__container--menu--list">
-            <li class="nav__container--menu--item"><a href="" class="nav__container--menu--link active">Inicio</a></li>
-            <li class="nav__container--menu--item"><a href="" class="nav__container--menu--link">Destinos populares</a></li>
-            <li class="nav__container--menu--item"><a href="" class="nav__container--menu--link">Paquetes</a></li>
+            <li class="nav__container--menu--item"><a href="index.html" class="nav__container--menu--link active">Inicio</a></li>
+            <li class="nav__container--menu--item"><a href="#SearchTravels" class="nav__container--menu--link">Buscar Destino</a></li>
+            <li class="nav__container--menu--item"><a href="#allDestinations" class="nav__container--menu--link">Destinos</a></li>
             <li class="nav__container--menu--item"><a href="" class="nav__container--menu--link">contactanos</a></li>
             <a href="" id="closeMenu" ><i class="bi bi-x-lg"></i></a>
           </ul>
@@ -40,13 +40,13 @@
         </div>
       </div>
     </nav>
-    <section class="header__container">
-      <h1 class="header__container--title">ELEGÍ TU DESTINO</h1>
+    <section class="header__travels--container">
+      <h1 class="header__travels--container--title">ELEGÍ TU DESTINO</h1>
     </section>
   </header>
   <main>
     <!-- TRAVEL INFO -->
-    <section class="travel">
+    <section class="travel" id="SearchTravels">
       <div class="travel__container">
         <form action="" class="travel__form">
           <!-- DESTINATION -->
@@ -139,6 +139,7 @@
 <script src="js/travels.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/filter.js"></script>
-<!-- <script src="js/main3.js"></script> -->
+<!-- LINK SWEET ALERT JS -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

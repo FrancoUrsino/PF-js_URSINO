@@ -1,10 +1,10 @@
-.travels{
+.travels {
   width: 100%;
   display: grid;
   overflow: hidden;
   grid-area: travels;
 
-  &__title{
+  &__title {
     display: flex;
     justify-content: center;
     font-size: 2.3rem;
@@ -14,7 +14,7 @@
     margin: 10px 0;
   }
 
-  &__text{
+  &__text {
     display: flex;
     justify-content: center;
     font-family: $sofiaSans;
@@ -23,8 +23,8 @@
     display: flex;
     text-align: center;
   }
-  
-  &__container{
+
+  &__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, auto));
     gap: 1.5em;
@@ -32,7 +32,7 @@
     justify-content: center;
     margin: 10px 0;
 
-    .travels__buyTravel{
+    .travels__buyTravel {
       display: flex;
       justify-content: center;
       text-align: center;
@@ -42,21 +42,36 @@
       padding: 7px 15px;
     }
 
-    &--container{
+    &--card {
       position: relative;
-      overflow: hidden;
-      border-radius: 25px;
+      width: 350px;
       height: 550px;
-      width: 360px;
-      
-      .travels__card--img{
+      margin: 10px 0;
+
+      &--container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 25px;
+        overflow: hidden;
+        transition: .7s ease-in-out;
+      }
+
+      & .front {
+        transform: perspective(800px) rotateY(0deg);
+        transform-style: preserve-3d;
+        box-shadow: 0 5px 10px $black;
+      }
+
+      & .front__img {
+        position: absolute;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 30px;
       }
 
-      .travels__card--container{
+      & .front__container {
         position: absolute;
         bottom: 20px;
         left: 20px;
@@ -67,21 +82,15 @@
         padding: 20px 10px;
         color: white;
 
-        &--title{
+        &--title {
           font-size: 30px;
-          font-family: 'Aboreto', cursive;
-          display: flex;
-          justify-content: center;
-          text-align: center;
-        }
-        
-        &--description{
+          font-family: $aboreto;
           display: flex;
           justify-content: center;
           text-align: center;
         }
 
-        &--price{
+        &--price {
           position: absolute;
           bottom: -10px;
           font-weight: bold;
@@ -91,10 +100,44 @@
         }
       }
 
-      &--btn{
-        color: black;
+      & .back {
+        transform: perspective(800px) rotateY(180deg);
+        transform-style: preserve-3d;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 1px solid $white;
+        backdrop-filter: blur(6px);
+        padding: 15px;
+        color: $lazyBlue;
+        display: grid;
+        grid-template-rows: 100px 1fr;
+        justify-content: space-between;
+        text-align: center;
+        box-shadow: 0 5px 10px $black;
       }
+
+      & .back__title {
+        font-family: $aboreto;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      & .back__description{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    .travels__container--card:hover .front {
+      transform: perspective(800px) rotateY(180deg);
+      transform-style: preserve-3d;
+    }
+    
+    .travels__container--card:hover .back {
+      transform-style: preserve-3d;
+      transform: perspective(800px) rotateY(360deg);
     }
   }
 }
-
