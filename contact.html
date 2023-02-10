@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tus Destinos Favoritos | DISC.OVER Arg</title>
+  <!-- LINK FAVICON -->
+  <link rel="shortcut icon" href="img/svg/plane.svg" type="image/x-icon">
+  <!-- LINK BOOTSTRAR ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- LINKS ABORETO FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <!-- LINKS SOFIA SANS FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@200;300;400;600;700&display=swap"
+    rel="stylesheet">
+  <!-- LINK CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body__contact">
+  <nav class="nav">
+    <div class="nav__container">
+      <p class="nav__container--logo"><img src="img/svg/plane.svg" alt="">DISC.OVER Arg</p>
+      <div class="nav__container--menu" id="nav">
+        <ul class="nav__container--menu--list">
+          <li class="nav__container--menu--item"><a href="index.html" class="nav__container--menu--link">Inicio</a></li>
+          <li class="nav__container--menu--item"><a href="travels.html" class="nav__container--menu--link">Destinos</a></li>
+          <li class="nav__container--menu--item"><a href="" class="nav__container--menu--link active">contactanos</a></li>
+          <a href="" id="closeMenu"><i class="bi bi-x-lg"></i></a>
+        </ul>
+      </div>
+      <p class="nav__container--cart cartID" id="cart"><i class="bi bi-cart3"></i><span id="cartQuant"
+          class="nav__menu--cart"></span></p>
+      <div id="navMenu" class="nav__menuIcon">
+        <i class="bi bi-text-indent-left" id="navMenuIcon"></i>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="form">
+      <div class="form__container">
+        <div class="form__box">
+          <h3 class="form__title">CONTACTANOS</h3>
+          <form action="https://formsubmit.co/franncoursinno@gmail.com" class="form__container--form"  method="POST">
+            <div class="form__box--input">
+              <label for="name" class="form__label">NOMBRE</label>
+              <input type="text" id="name" class="form__input">
+            </div>
+            <div class="form__box--input">
+              <label for="email" class="form__label">EMAIL</label>
+              <input type="email" id="email" class="form__input">
+            </div>
+            <div class="form__box--input">
+              <textarea placeholder="deja aca tu mensaje" class="form__input"></textarea>
+            </div>
+            <div class="mx-4 pb-4 form__checks"> 
+              <input type="checkbox" name="terminos y condiciones" id="TyC">
+              <label for="TyC">Acepta los <a href="#" target="_blank">terminos y condiciones</a></label>
+            </div>
+            <div class="mx-4 pb-4 form__checks"> 
+              <input type="checkbox" name="terminos y condiciones" id="Notify">
+              <label for="Notify">Para recibir novedades por email</label>
+            </div>
+            <button type="submit" class="form__btn">enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__img">DISC.OVER ARG</p>
+      <ul class="footer__list">
+        <li class="footer__text">2023&copy;DISC.OVER arg | All Rigths Reserved</li>
+        <li class="footer__text2">Diseño y Desarrollo por <a href="mailto:francooursinoo@gmail.com">Franco Ursino</a>
+        </li>
+      </ul>
+      <div class="footer__icons">
+        <a href="">
+          <img src="img/svg/gmail.svg" alt="" class="footer__icon">
+        </a>
+        <a href="" target="_blank">
+          <img src="img/svg/wpp.svg" alt="" class="footer__icon">
+        </a>
+        <a href="" target="_blank">
+          <img src="img/svg/instagram.svg" alt="" class="footer__icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- LINK NAV JS -->
+  <script src="js/nav.js"></script>
+  <!-- LINKS JS -->
+  <script src="js/travels.js"></script>
+  <script src="js/cart.js"></script>
+  <!-- LINK SWEET ALERT JS -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

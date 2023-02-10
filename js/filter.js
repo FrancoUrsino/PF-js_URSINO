@@ -21,7 +21,7 @@ categoryButton.forEach(button => {
 });
 
 
-for (let i = 0; i < travels.length; i++) {
+for (let i = 0; i < callTravels.length; i++) {
   travels[i].price = parseInt(travels[i].price)
 }
 minMax.addEventListener('click', () => {
