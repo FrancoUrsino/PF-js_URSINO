@@ -96,6 +96,8 @@ async function callTravels() {
 const travels = callTravels();
 
 function takeTravels(travels) {
+  travelsContainer.innerHTML = "";
+  
   for (travelData of travels) {
     const content = document.createElement("div");
     content.innerHTML =
@@ -114,7 +116,7 @@ function takeTravels(travels) {
         </div>
       </div>
       `;
-      
+
     const mergeAll = searchTravelButton.addEventListener('click', function searchTravel() { travelsOut.style.display = "none"; });
     travelsContainer.append(content);
 
