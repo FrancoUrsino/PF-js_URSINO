@@ -83,10 +83,12 @@
 
 const travelsContainer = document.querySelector('#travelsContainer');
 let travels;
+
+// function to Save changes in localStorage
 const saveLocal = () => {
   localStorage.setItem("cart", JSON.stringify(cart));
 };
-
+// 
 async function callTravels() {
   const res = await fetch("js/travelsData.json");
   travels = await res.json();

@@ -46,14 +46,14 @@ const showModalCart = () => {
     // add o kick travel for the cart
     let more = cartContent.querySelector(".more")
     more.addEventListener('click', () => {
-      travel.quan++;
+      travels.quan++;
       saveLocal();
       showModalCart();
     });
     let less = cartContent.querySelector(".less");
     less.addEventListener('click', () => {
-      if (travel.quan !== 1) {
-        travel.quan--;
+      if (travels.quan !== 1) {
+        travels.quan--;
       }
       saveLocal();
       showModalCart();
@@ -61,7 +61,7 @@ const showModalCart = () => {
 
     let deleteTravel = cartContent.querySelector(".modal__cont--deleteTravel");
     deleteTravel.addEventListener('click', () => {
-      deleteTravelSelect(travel.id);
+      deleteTravelSelect(travels.id);
     });
   });
 

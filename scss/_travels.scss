@@ -40,6 +40,18 @@
       border-radius: 25px;
       margin: 10px auto 0;
       padding: 7px 15px;
+      color: $lazyBlue;
+      transition: $transition;
+      background-color: $white;
+
+      &:hover{
+        letter-spacing: 2px;
+        padding: 7px 10px;
+        background-color: $lazyBlue;
+        border: 1px solid transparent;
+        color: $white;
+        box-shadow: 0 10px 20px $skyBlue;
+      }
     }
 
     &--card {
@@ -78,7 +90,7 @@
         right: 20px;
         background: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(3px);
-        border-radius: 25px;
+        border-radius: 5px 5px 25px 25px;
         padding: 20px 10px;
         color: white;
 

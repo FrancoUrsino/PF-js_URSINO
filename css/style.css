@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 .modal__container {
-  width: 50%;
+  width: 60%;
   margin-left: 20em;
   display: flex;
   flex-direction: column;
@@ -723,6 +723,17 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 25px;
   margin: 10px auto 0;
   padding: 7px 15px;
+  color: rgb(108, 158, 214);
+  transition: 0.4s, easy-in-out;
+  background-color: white;
+}
+.travels__container .travels__buyTravel:hover {
+  letter-spacing: 2px;
+  padding: 7px 10px;
+  background-color: rgb(108, 158, 214);
+  border: 1px solid transparent;
+  color: white;
+  box-shadow: 0 10px 20px rgb(124, 195, 231);
 }
 .travels__container--card {
   position: relative;
@@ -757,7 +768,7 @@ h1, h2, h3, h4, h5, h6, p {
   right: 20px;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(3px);
-  border-radius: 25px;
+  border-radius: 5px 5px 25px 25px;
   padding: 20px 10px;
   color: white;
 }
