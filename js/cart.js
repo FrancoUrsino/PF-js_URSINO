@@ -19,20 +19,20 @@ const showModalCart = () => {
     modalContainer.style.display = "none";
   })
 
-  cart.forEach((travel) => {
+  cart.forEach((Travels) => {
     let cartContent = document.createElement("div")
     cartContent.className = "modal__cont";
     cartContent.innerHTML =
       `
       <div class="modal__cont--img">
-        <img src="${travel.img}" alt="" class="modal__cont--img--img img__cart">
+        <img src="${travels.img}" alt="" class="modal__cont--img--img img__cart">
       </div>
       <div class="modal__cont--travel">
-        <p class="modal__cont--travel--name">Destino: ${travel.name}</p>
-        <p class="modal__cont--travel--price">Precio $${travel.price}</p>
+        <p class="modal__cont--travel--name">Destino: ${travels.name}</p>
+        <p class="modal__cont--travel--price">Precio $${travels.price}</p>
         <div class="modal__cont--travel--container">
           <span class="more">+</span>
-          <p class="modal__cont--travel--container--quan">Boletos: ${travel.quan}</p>
+          <p class="modal__cont--travel--container--quan">Boletos: ${travels.quan}</p>
           <span class="less">-</span>
         </div>
         <div class="modal__cont--travel">

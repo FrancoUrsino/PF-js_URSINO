@@ -82,37 +82,40 @@
 
 
 const travelsContainer = document.querySelector('#travelsContainer');
+let travels;
 const saveLocal = () => {
   localStorage.setItem("cart", JSON.stringify(cart));
 };
 
 async function callTravels() {
   const res = await fetch("js/travelsData.json");
-  const travels = await res.json();
+  travels = await res.json();
 
   console.log(travels);
+  takeTravels(travels);
+
 }
 
-const travels = callTravels();
+callTravels();
 
 function takeTravels(travels) {
   travelsContainer.innerHTML = "";
-  
-  for (travelData of travels) {
+
+  for (let i = 0; i < travels.length; i++) {
     const content = document.createElement("div");
     content.innerHTML =
       `
       <div class="travels__container--card">
         <div class="travels__container--card--container front">
-          <img src="${travelData.img}" class="front__img">
+          <img src="${travels[i].img}" class="front__img">
           <div class="front__container">
-            <h3 class="front__container--title">${travelData.name}</h3>
-            <h3 class="front__container--price">${travelData.price}</h3>
+            <h3 class="front__container--title">${travels[i].name}</h3>
+            <h3 class="front__container--price">${travels[i].price}</h3>
           </div>
         </div>
         <div class="travels__container--card--container back">
-          <h3 class="back__title">${travelData.name}</h3>
-          <p class="back__description">${travelData.desc}</p>
+          <h3 class="back__title">${travels[i].name}</h3>
+          <p class="back__description">${travels[i].desc}</p>
         </div>
       </div>
       `;
@@ -123,8 +126,32 @@ function takeTravels(travels) {
     let buyOption = document.createElement('button');
     buyOption.className = "travels__buyTravel"
     buyOption.innerHTML = `Agregar Destino`
-    content.append(buyOption)
+    content.append(buyOption);
+
+    buyOption.addEventListener('click', () => {
+
+
+      const repeatTravel = cart.some((repeatOption) => repeatOption.id === travels.id);
+      if (repeatTravel === true) {
+        cart.map((option) => {
+          if (option.id === travels.id) {
+            option.quan++;
+          }
+        });
+      } else {
+        cart.push({
+          id: travels.id,
+          img: travels.img,
+          name: travels.name,
+          price: travels.price,
+          quan: travels.quan,
+          stars: travels.stars,
+        });
+      }
+      console.log(cart);
+      cartNum();
+      saveLocal();
+      swal('Genial', `Añadiste al carrito el destino ${travels.name} exitosamente`, 'success')
+    });
   }
 }
-
-takeTravels();
