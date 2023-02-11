@@ -56,6 +56,32 @@
     <!-- MODAL -->
     <div id="modalContainer" class="modal__container"></div>
 
+    <!-- NUMBERS -->
+    <section class="clients">
+      <div class="clients__container">
+        <div class="clients__container--container">
+          <i class="fab fa-twitter"></i>
+          <span class="clients__container--number" data-val="345">000</span><br>
+          <span class="clients__container--title">Viajes Realizados</span>
+        </div>
+        <div class="clients__container--container">
+          <i class="fab fa-facebook-f"></i>
+          <span class="clients__container--number" data-val="2047">000</span><br>
+          <span class="clients__container--title">Clientes Felices</span>
+        </div>
+        <div class="clients__container--container">
+          <i class="fab fa-youtube"></i>
+          <span class="clients__container--number" data-val="70">000</span><br>
+          <span class="clients__container--title">Viajes en Enero</span>
+        </div>
+        <div class="clients__container--container">
+          <i class="fab fa-instagram"></i>
+          <span class="clients__container--number" data-val="275">000</span><br>
+          <span class="clients__container--title">Viajes en 2022
+          </span>
+        </div>
+      </div>
+    </section>
 
     <!-- POPULAR DESTINATIONS -->
     <section class="popular" id="destinations">
@@ -209,6 +235,59 @@
       </div>
     </section>
 
+    <!-- SLIDERS -->
+    <section class="slider">
+      <div class="slider__container container">
+        <img src="../img/svg/caret-left-fill.svg" alt="" class="slider__arrow" id="before">
+        <div class="slider__body slider__body--show" data-id="1">
+          <div class="slider__info">
+            <h2 class="slider__subtitle">Andrea Contreras</h2>
+            <p class="slider__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum impedit veritatis eos magnam voluptatibus sit reprehenderit. Quas harum neque sapiente quia quidem atque debitis culpa perspiciatis. Itaque, est exercitationem!</p>
+          </div>
+          <figure class="slider__img">
+            <img src="img/andre.jpg" alt="" class="slider__img--img">
+          </figure>
+        </div>
+        <div class="slider__body" data-id="2">
+          <div class="slider__info">
+            <h2 class="slider__subtitle">Candela Carmen Siede</h2>
+            <p class="slider__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum impedit veritatis eos magnam voluptatibus sit reprehenderit. Quas harum neque sapiente quia quidem atque debitis culpa perspiciatis. Itaque, est exercitationem!</p>
+          </div>
+          <figure class="slider__img">
+            <img src="img/chanchi.jpg" alt="" class="slider__img--img">
+          </figure>
+        </div>
+        <div class="slider__body" data-id="3">
+          <div class="slider__info">
+            <h2 class="slider__subtitle">Camila Vellani</h2>
+            <p class="slider__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum impedit veritatis eos magnam voluptatibus sit reprehenderit. Quas harum neque sapiente quia quidem atque debitis culpa perspiciatis. Itaque, est exercitationem!</p>
+          </div>
+          <figure class="slider__img">
+            <img src="img/cami.jpg" alt="" class="slider__img--img">
+          </figure>
+        </div>
+        <div class="slider__body" data-id="4">
+          <div class="slider__info">
+            <h2 class="slider__subtitle">Felipe Changalay</h2>
+            <p class="slider__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum impedit veritatis eos magnam voluptatibus sit reprehenderit. Quas harum neque sapiente quia quidem atque debitis culpa perspiciatis. Itaque, est exercitationem!</p>
+          </div>
+          <figure class="slider__img">
+            <img src="img/feli.jpg" alt="" class="slider__img--img">
+          </figure>
+        </div>
+        <div class="slider__body" data-id="5">
+          <div class="slider__info">
+            <h2 class="slider__subtitle">Bautista Martinez</h2>
+            <p class="slider__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum impedit veritatis eos magnam voluptatibus sit reprehenderit. Quas harum neque sapiente quia quidem atque debitis culpa perspiciatis. Itaque, est exercitationem!</p>
+          </div>
+          <figure class="slider__img">
+            <img src="img/bauti.jpg" alt="" class="slider__img--img">
+          </figure>
+        </div>
+        <img src="../img/svg/caret-right-fill.svg" alt="" class="slider__arrow" id="after">
+      </div>
+    </section>
+
   </main>
   <footer class="footer">
     <div class="footer__container">
@@ -236,8 +315,11 @@
   <!-- LINK NAV JS -->
   <script src="js/nav.js"></script>
   <!-- LINKS JS -->
-  <script src="js/travels.js"></script>
+  <!-- <script src="js/travels.js"></script> -->
   <script src="js/cart.js"></script>
+  <script src="js/numbers.js"></script>
+  <script src="../js/slide.js"></script>
+
   <!-- LINK SWEET ALERT JS -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>

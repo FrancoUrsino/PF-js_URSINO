@@ -342,6 +342,76 @@ h1, h2, h3, h4, h5, h6, p {
     margin-left: 3em;
   }
 }
+.clients {
+  width: 100%;
+  margin: 60px 0;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.clients__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, auto));
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  gap: 2em;
+}
+.clients__container--container {
+  width: 150px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 3px 4px 4px rgba(223, 223, 223, 0.426), inset 5px 4px 6px rgba(223, 223, 223, 0.426);
+}
+.clients__container--title {
+  color: rgb(108, 158, 214);
+  font-weight: bold;
+}
+.clients__container--number {
+  font-size: 2rem;
+  color: rgb(124, 195, 231);
+  text-shadow: 1px 2px 4px rgb(108, 158, 214);
+}
+
+.proyects {
+  width: 100%;
+  margin: 40px 0;
+}
+.proyects__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+.proyects__link {
+  font-size: 25px;
+  color: rgb(124, 195, 231);
+  padding: 7px 10px;
+  background-color: rgb(108, 158, 214);
+  cursor: pointer;
+  border-radius: 7px;
+}
+.proyects__link:hover {
+  color: rgb(191, 191, 191);
+  text-shadow: 1px 2px 4px rgb(108, 158, 214);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+  background-color: rgb(191, 191, 191);
+}
+.proyects__link--2 {
+  font-size: 25px;
+  color: rgb(108, 158, 214);
+  padding: 7px 10px;
+  background-color: rgb(124, 195, 231);
+  cursor: pointer;
+  border-radius: 7px;
+}
+.proyects__link--2:hover {
+  color: rgb(191, 191, 191);
+  text-shadow: 1px 2px 4px rgb(108, 158, 214);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+  background-color: rgb(191, 191, 191);
+}
+
 .travel {
   background-color: rgb(124, 195, 231);
   padding-block: 20px;
@@ -902,6 +972,100 @@ h1, h2, h3, h4, h5, h6, p {
   color: white;
 }
 
+.container {
+  width: 90%;
+  min-height: 70vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  background-color: white;
+  padding: 30px 0;
+}
+.slider__container {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  gap: 1em;
+  align-items: center;
+}
+.slider__body {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  opacity: 0;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: rgb(124, 195, 231);
+  align-items: center;
+  transition: opacity 0.6s;
+  padding: 10px;
+  border-radius: 10px;
+}
+.slider__body--show {
+  opacity: 1;
+  pointer-events: unset;
+}
+.slider__img--img {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  align-items: center;
+  display: block;
+  margin: 0 auto;
+}
+.slider__arrow {
+  cursor: pointer;
+  width: 90%;
+}
+.slider__arrow:nth-of-type(2) {
+  justify-self: end;
+}
+.slider__info {
+  color: white;
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-size: 20px;
+}
+.slider__subtitle {
+  font-size: 2.3rem;
+  text-transform: capitalize;
+  position: relative;
+  top: -35px;
+}
+.slider__subtitle span {
+  font-size: 15px;
+  vertical-align: super;
+}
+.slider__review {
+  position: relative;
+}
+
+@media (max-width: 680px) {
+  .slider__container {
+    grid-template-columns: 25px 1fr 25px;
+  }
+  .slider__arrow {
+    width: 100%;
+  }
+  .slider__body {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    align-items: center;
+    text-align: center;
+  }
+  .slider__subtitle {
+    top: 0;
+  }
+  .slider__img {
+    grid-row: 1/2;
+  }
+  .slider__img--img {
+    width: 210px;
+    height: 210px;
+  }
+}
 .body__contact {
   background-image: radial-gradient(circle, rgba(37, 37, 37, 0.5) 0%, rgba(37, 37, 37, 0.5) 100%), url(../img/bariloche.jpg);
   background-size: cover;
