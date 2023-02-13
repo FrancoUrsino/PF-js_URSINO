@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 5rem;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.25);
-  text-shadow: 1px 2px 4px rgb(108, 158, 214);
+  text-shadow: 1px 2px 4px #6c9ed6;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
 }
 .header__container--text {
@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 5rem;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.25);
-  text-shadow: 1px 2px 4px rgb(108, 158, 214);
+  text-shadow: 1px 2px 4px #6c9ed6;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
 }
 
@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
 }
 .nav__container--menu--link {
-  color: rgb(124, 195, 231);
+  color: #7cc3e7;
   font-size: 20px;
   transition: 0.4s, easy-in-out;
 }
@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   height: 100%;
   padding-top: 5px;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
 }
 .nav__container .nav__menu--cart {
   background-color: rgba(255, 255, 255, 0.5);
@@ -326,8 +326,8 @@ h1, h2, h3, h4, h5, h6, p {
   color: rgb(191, 191, 191);
 }
 .total__container--btn:hover {
-  border: 1px solid rgb(108, 158, 214);
-  color: rgb(108, 158, 214);
+  border: 1px solid #6c9ed6;
+  color: #6c9ed6;
 }
 
 .more, .less {
@@ -364,13 +364,13 @@ h1, h2, h3, h4, h5, h6, p {
   box-shadow: 3px 4px 4px rgba(223, 223, 223, 0.426), inset 5px 4px 6px rgba(223, 223, 223, 0.426);
 }
 .clients__container--title {
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
   font-weight: bold;
 }
 .clients__container--number {
   font-size: 2rem;
-  color: rgb(124, 195, 231);
-  text-shadow: 1px 2px 4px rgb(108, 158, 214);
+  color: #7cc3e7;
+  text-shadow: 1px 2px 4px #6c9ed6;
 }
 
 .proyects {
@@ -385,35 +385,35 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .proyects__link {
   font-size: 25px;
-  color: rgb(124, 195, 231);
+  color: #7cc3e7;
   padding: 7px 10px;
-  background-color: rgb(108, 158, 214);
+  background-color: #6c9ed6;
   cursor: pointer;
   border-radius: 7px;
 }
 .proyects__link:hover {
   color: rgb(191, 191, 191);
-  text-shadow: 1px 2px 4px rgb(108, 158, 214);
+  text-shadow: 1px 2px 4px #6c9ed6;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
   background-color: rgb(191, 191, 191);
 }
 .proyects__link--2 {
   font-size: 25px;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
   padding: 7px 10px;
-  background-color: rgb(124, 195, 231);
+  background-color: #7cc3e7;
   cursor: pointer;
   border-radius: 7px;
 }
 .proyects__link--2:hover {
   color: rgb(191, 191, 191);
-  text-shadow: 1px 2px 4px rgb(108, 158, 214);
+  text-shadow: 1px 2px 4px #6c9ed6;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
   background-color: rgb(191, 191, 191);
 }
 
 .travel {
-  background-color: rgb(124, 195, 231);
+  background-color: #7cc3e7;
   padding-block: 20px;
   font-family: "Sofia Sans Extra Condensed", sans-serif;
   font-size: 20px;
@@ -476,7 +476,7 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
   text-transform: uppercase;
   margin: 25px 0;
   font-family: "Sofia Sans Extra Condensed", sans-serif;
@@ -500,7 +500,7 @@ h1, h2, h3, h4, h5, h6, p {
 .popular__container--btn {
   font-family: "Sofia Sans Extra Condensed", sans-serif;
   display: flex;
-  border: 2px solid rgb(108, 158, 214);
+  border: 2px solid #6c9ed6;
   border-radius: 50px;
   padding: 3px 15px;
   justify-self: center;
@@ -509,15 +509,15 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .popular__container--btn a {
   font-size: 25px;
-  color: rgb(108, 158, 214);
-  text-shadow: 1px 1px 4px rgb(124, 195, 231);
+  color: #6c9ed6;
+  text-shadow: 1px 1px 4px #7cc3e7;
 }
 .popular__container--btn a:hover {
   color: white;
   text-shadow: 1px 1px 4px rgb(191, 191, 191);
 }
 .popular__container--btn:hover {
-  background-color: rgb(108, 158, 214);
+  background-color: #6c9ed6;
   border: 2px solid transparent;
 }
 .popular__container--list {
@@ -593,7 +593,7 @@ h1, h2, h3, h4, h5, h6, p {
 .packeges__title {
   font-family: "Sofia Sans Extra Condensed", sans-serif;
   font-size: 3rem;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
   font-weight: 500;
   margin: 30px 0 15px;
   text-transform: uppercase;
@@ -638,7 +638,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 35px;
   font-family: "Aboreto", cursive;
   font-size: 25px;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
 }
 .packeges__container--container--container--descrip--text {
   font-family: "Sofia Sans Extra Condensed", sans-serif;
@@ -650,7 +650,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: grid;
   grid-template-columns: repeat(3, 85px);
   justify-content: center;
-  border: 1px solid rgb(108, 158, 214);
+  border: 1px solid #6c9ed6;
   width: 260px;
   margin: 0 auto;
   margin-top: 5em;
@@ -662,13 +662,13 @@ h1, h2, h3, h4, h5, h6, p {
   overflow: hidden;
 }
 .packeges__container--container--container--descrip--container i, .packeges__container--container--container--descrip--container span {
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
 }
 .packeges__container--container--container--descrip--container span {
   font-weight: bold;
 }
 .packeges__container--container--container--info {
-  background-color: rgb(108, 158, 214);
+  background-color: #6c9ed6;
   border-radius: 0 0 50px 50px;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -709,7 +709,7 @@ h1, h2, h3, h4, h5, h6, p {
 .packeges__container--container--container--info--btn:hover {
   border: 1px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
-  background-color: rgb(124, 195, 231);
+  background-color: #7cc3e7;
 }
 
 @media (min-width: 350px) {
@@ -763,7 +763,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   justify-content: center;
   font-size: 2.3rem;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
   font-family: "Sofia Sans Extra Condensed", sans-serif;
   font-weight: 400;
   margin: 10px 0;
@@ -789,21 +789,21 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   justify-content: center;
   text-align: center;
-  border: 1px solid rgb(108, 158, 214);
+  border: 1px solid #6c9ed6;
   border-radius: 25px;
   margin: 10px auto 0;
   padding: 7px 15px;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
   transition: 0.4s, easy-in-out;
   background-color: white;
 }
 .travels__container .travels__buyTravel:hover {
   letter-spacing: 2px;
   padding: 7px 10px;
-  background-color: rgb(108, 158, 214);
+  background-color: #6c9ed6;
   border: 1px solid transparent;
   color: white;
-  box-shadow: 0 10px 20px rgb(124, 195, 231);
+  box-shadow: 0 10px 20px #7cc3e7;
 }
 .travels__container--card {
   position: relative;
@@ -864,7 +864,7 @@ h1, h2, h3, h4, h5, h6, p {
   border: 1px solid white;
   backdrop-filter: blur(6px);
   padding: 15px;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
   display: grid;
   grid-template-rows: 100px 1fr;
   justify-content: space-between;
@@ -916,7 +916,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .searchTravels__card--container--title {
   font-size: 30px;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
   font-family: "Aboreto", cursive;
 }
 .searchTravels__card--container button {
@@ -956,19 +956,19 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .filters__container--btn {
   background-color: rgb(245, 245, 245);
-  border: 1px solid rgb(108, 158, 214);
+  border: 1px solid #6c9ed6;
   border-radius: 20px;
   padding: 7px 15px;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
   cursor: pointer;
 }
 .filters__container--btn.active {
-  background-color: rgb(108, 158, 214);
+  background-color: #6c9ed6;
   color: white;
 }
 
 .filters__container--btn.active {
-  background-color: rgb(108, 158, 214);
+  background-color: #6c9ed6;
   color: white;
 }
 
@@ -997,7 +997,7 @@ h1, h2, h3, h4, h5, h6, p {
   pointer-events: none;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-color: rgb(124, 195, 231);
+  background-color: #7cc3e7;
   align-items: center;
   transition: opacity 0.6s;
   padding: 10px;
@@ -1071,7 +1071,7 @@ h1, h2, h3, h4, h5, h6, p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
 }
 
 .form {
@@ -1116,7 +1116,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid rgb(108, 158, 214);
+  border-bottom: 2px solid #6c9ed6;
   color: inherit;
   font-weight: inherit;
   font-family: inherit;
@@ -1136,21 +1136,21 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: 300;
 }
 .form__checks a {
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
   text-shadow: rgba(0, 0, 0, 0.3) 1px 1px;
 }
 .form__checks a:hover {
-  color: rgb(124, 195, 231);
+  color: #7cc3e7;
 }
 
 .footer {
   width: 100%;
   margin: 30px 0 10px 0;
   bottom: 0px;
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
 }
 .footer__container {
-  border-top: 1.5px solid rgb(108, 158, 214);
+  border-top: 1.5px solid #6c9ed6;
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(150px, auto));
   justify-content: space-evenly;
@@ -1172,7 +1172,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: rgb(107, 107, 107);
 }
 .footer__list .footer__text2--link:hover {
-  color: rgb(108, 158, 214);
+  color: #6c9ed6;
 }
 .footer__icons a {
   text-decoration: none;
@@ -1192,7 +1192,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 1.5rem;
   }
   .footer__container {
-    border-top: 1.5px solid rgb(108, 158, 214);
+    border-top: 1.5px solid #6c9ed6;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
