@@ -38,6 +38,16 @@
   }
 }
 
+.notOptions{
+  font-size: 40px;
+  margin: 2em 0;
+  color: $lazyBlue;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: $aboreto;
+}
+
 @media (min-width:799px){
   .searchTravels__card{
     display: grid;

@@ -1,12 +1,12 @@
-.body__contact{
+.body__contact {
   background-image: radial-gradient(circle, rgba(37, 37, 37, 0.5) 0%, rgba(37, 37, 37, 0.5) 100%), url(../img/bariloche.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color:$lazyBlue;
+  color: $lazyBlue;
 }
 
-.form{
+.form {
   height: 100vh;
   padding: 35px 15px;
   display: flex;
@@ -14,17 +14,17 @@
   justify-content: center;
   z-index: 1;
 
-  &__container{
+  &__container {
     width: 100%;
     max-width: 450px;
     position: relative;
     background: rgb(255, 255, 255, 0.3);
     box-shadow: 0 8px 30px 0 rgba(48, 48, 51, 0.4);
-    backdrop-filter: blur( 3px );
+    backdrop-filter: blur(3px);
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
 
-  &__box{
+  &__box {
     border-color: $white;
     border: 1px solid var($white);
     padding: 40px 50px;
@@ -32,22 +32,22 @@
     backdrop-filter: blur;
   }
 
-  &__title{
+  &__title {
     font-size: 28px;
     text-align: center;
     line-height: 1.2;
     color: $white;
   }
 
-  &__container--form{
+  &__container--form {
     margin: 25px 0 20px;
   }
 
-  &__box--input{
+  &__box--input {
     margin: 25px;
   }
 
-  &__input{
+  &__input {
     display: grid;
     height: 30px;
     width: 100%;
@@ -60,28 +60,51 @@
     font-size: 16px;
     outline: none;
 
-    &::placeholder{
+    &::placeholder {
       color: $white;
     }
   }
 
-  &__label{
+  &__label {
     color: $white;
     padding-bottom: 5px;
   }
 
-  &__checks{
+  &__checks {
     font-size: 13px;
     align-items: flex-start;
     font-weight: 300;
 
-    a{
+    a {
       color: $lazyBlue;
       text-shadow: rgba(0, 0, 0, .3) 1px 1px;
 
-      &:hover{
+      &:hover {
         color: $skyBlue;
       }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    font-weight: bold;
+    margin-top: 35px;
+    border: 1px solid $white;
+    border-radius: 100px;
+    padding: 10px 15px;
+    transition: $transition;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+
+    &:hover,
+    &:focus {
+      letter-spacing: .7rem;
+      color: rgba(255, 255, 255, 0.441)
     }
   }
 }

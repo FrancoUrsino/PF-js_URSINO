@@ -74,7 +74,7 @@ const searchTravel = () => {
       searchResult.style.display = "grid"
     }
   }
-  if (searchResult.innerHTML === '') { searchResult.innerText += `Todavía no tenemos ese destino` }
+  if (searchResult.innerHTML === '') { searchResult.innerHTML += `<p class="notOptions">Todavía no tenemos ese destino</p>` }
 }
 
 searchTravelButton.addEventListener('click', searchTravel)

@@ -928,6 +928,16 @@ h1, h2, h3, h4, h5, h6, p {
   color: rgb(191, 191, 191);
 }
 
+.notOptions {
+  font-size: 40px;
+  margin: 2em 0;
+  color: #6c9ed6;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Aboreto", cursive;
+}
+
 @media (min-width: 799px) {
   .searchTravels__card {
     display: grid;
@@ -1141,6 +1151,25 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .form__checks a:hover {
   color: #7cc3e7;
+}
+.form__btn {
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  font-weight: bold;
+  margin-top: 35px;
+  border: 1px solid white;
+  border-radius: 100px;
+  padding: 10px 15px;
+  transition: 0.4s, easy-in-out;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.form__btn:hover, .form__btn:focus {
+  letter-spacing: 0.7rem;
+  color: rgba(255, 255, 255, 0.441);
 }
 
 .footer {
