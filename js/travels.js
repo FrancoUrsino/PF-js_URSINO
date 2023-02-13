@@ -95,10 +95,9 @@ async function callTravels() {
 
   console.log(travels);
   takeTravels(travels);
-
 }
 
-callTravels();
+let travelsArray = callTravels();
 
 function takeTravels(travels) {
   travelsContainer.innerHTML = "";
@@ -133,27 +132,27 @@ function takeTravels(travels) {
     buyOption.addEventListener('click', () => {
 
 
-      const repeatTravel = cart.some((repeatOption) => repeatOption.id === travels.id);
+      const repeatTravel = cart.some((repeatOption) => repeatOption.id === travels[i].id);
       if (repeatTravel === true) {
         cart.map((option) => {
-          if (option.id === travels.id) {
+          if (option.id === travels[i].id) {
             option.quan++;
           }
         });
       } else {
         cart.push({
-          id: travels.id,
-          img: travels.img,
-          name: travels.name,
-          price: travels.price,
-          quan: travels.quan,
-          stars: travels.stars,
+          id: travels[i].id,
+          img: travels[i].img,
+          name: travels[i].name,
+          price: travels[i].price,
+          quan: travels[i].quan,
+          stars: travels[i].stars,
         });
       }
       console.log(cart);
       cartNum();
       saveLocal();
-      swal('Genial', `Añadiste al carrito el destino ${travels.name} exitosamente`, 'success')
+      swal('Genial', `Añadiste al carrito el destino ${travels[i].name} exitosamente`, 'success')
     });
   }
 }

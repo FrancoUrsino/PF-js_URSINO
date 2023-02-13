@@ -19,20 +19,20 @@ const showModalCart = () => {
     modalContainer.style.display = "none";
   })
 
-  cart.forEach((Travels) => {
+  cart.forEach((travelsArray) => {
     let cartContent = document.createElement("div")
     cartContent.className = "modal__cont";
     cartContent.innerHTML =
       `
       <div class="modal__cont--img">
-        <img src="${travels.img}" alt="" class="modal__cont--img--img img__cart">
+        <img src="${travelsArray.img}" alt="" class="modal__cont--img--img img__cart">
       </div>
       <div class="modal__cont--travel">
-        <p class="modal__cont--travel--name">Destino: ${travels.name}</p>
-        <p class="modal__cont--travel--price">Precio $${travels.price}</p>
+        <p class="modal__cont--travel--name">Destino: ${travelsArray.name}</p>
+        <p class="modal__cont--travel--price">Precio $${travelsArray.price}</p>
         <div class="modal__cont--travel--container">
           <span class="more">+</span>
-          <p class="modal__cont--travel--container--quan">Boletos: ${travels.quan}</p>
+          <p class="modal__cont--travel--container--quan">Boletos: ${travelsArray.quan}</p>
           <span class="less">-</span>
         </div>
         <div class="modal__cont--travel">
@@ -42,18 +42,17 @@ const showModalCart = () => {
       `
     modalContainer.append(cartContent);
 
-
     // add o kick travel for the cart
     let more = cartContent.querySelector(".more")
     more.addEventListener('click', () => {
-      travels.quan++;
+      travelsArray.quan++;
       saveLocal();
       showModalCart();
     });
     let less = cartContent.querySelector(".less");
     less.addEventListener('click', () => {
-      if (travels.quan !== 1) {
-        travels.quan--;
+      if (travelsArray.quan !== 1) {
+        travelsArray.quan--;
       }
       saveLocal();
       showModalCart();
@@ -61,7 +60,7 @@ const showModalCart = () => {
 
     let deleteTravel = cartContent.querySelector(".modal__cont--deleteTravel");
     deleteTravel.addEventListener('click', () => {
-      deleteTravelSelect(travels.id);
+      deleteTravelSelect(travelsArray.id);
     });
   });
 
@@ -95,10 +94,14 @@ const showModalCart = () => {
 
           case "si":
             swal("Felicidades!!", "Compraste tus pasajes", "success");
+            saveLocal();
+            showModalCart();
             break;
 
           default:
             swal("OH Bueno", "Esperamos volar contigo la proxina", "error");
+            saveLocal();
+            showCart();
         }
       });
     let cartContent = document.querySelectorAll('.modal__cont');
