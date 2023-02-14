@@ -1,8 +1,8 @@
-.filters{
+.filters {
   width: 100%;
   font-family: $sofiaSans;
-  
-  &__container{
+
+  &__container {
     width: 80%;
     margin: 7px auto;
     display: grid;
@@ -11,7 +11,7 @@
     align-items: center;
     gap: 2em;
 
-    &--btn{
+    &--btn {
       background-color: rgb(245, 245, 245);
       border: 1px solid $lazyBlue;
       border-radius: 20px;
@@ -19,23 +19,15 @@
       color: $lazyBlue;
       cursor: pointer;
 
-      &.active{
+      &.active {
         background-color: $lazyBlue;
         color: $white;
       }
     }
   }
-  }
+}
 
-  .filters__container--btn.active{
-    background-color: $lazyBlue;
-    color: $white;
-  }
-
-
-// @media (min-width:360px){
-//   .filters__container{
-//     display: grid;
-//     grid-template-columns: repeat(auto-fit, minmax(100px, auto));
-//   }
-// }
+.filters__container--btn.active {
+  background-color: $lazyBlue;
+  color: $white;
+}

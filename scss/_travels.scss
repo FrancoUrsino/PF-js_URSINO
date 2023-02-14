@@ -44,7 +44,7 @@
       transition: $transition;
       background-color: $white;
 
-      &:hover{
+      &:hover {
         letter-spacing: 2px;
         padding: 7px 10px;
         background-color: $lazyBlue;
@@ -135,7 +135,7 @@
         align-items: center;
       }
 
-      & .back__description{
+      & .back__description {
         display: flex;
         justify-content: center;
         text-align: center;
@@ -146,7 +146,7 @@
       transform: perspective(800px) rotateY(180deg);
       transform-style: preserve-3d;
     }
-    
+
     .travels__container--card:hover .back {
       transform-style: preserve-3d;
       transform: perspective(800px) rotateY(360deg);

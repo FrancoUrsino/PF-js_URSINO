@@ -78,4 +78,3 @@ const searchTravel = () => {
 }
 
 searchTravelButton.addEventListener('click', searchTravel)
-

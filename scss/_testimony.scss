@@ -1,4 +1,4 @@
-.container{
+.container {
   width: 90%;
   min-height: 70vh;
   max-width: 1400px;
@@ -6,18 +6,18 @@
   overflow: hidden;
 }
 
-.slider{
+.slider {
   background-color: $white;
   padding: 30px 0;
 
-  &__container{
+  &__container {
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     gap: 1em;
     align-items: center;
   }
 
-  &__body{
+  &__body {
     grid-column: 2/3;
     grid-row: 1/2;
     opacity: 0;
@@ -31,14 +31,14 @@
     border-radius: 10px;
   }
 
-  &__body--show{
+  &__body--show {
     opacity: 1;
     pointer-events: unset;
   }
 
-  &__img{
+  &__img {
 
-    &--img{
+    &--img {
       width: 230px;
       height: 230px;
       border-radius: 50%;
@@ -49,34 +49,34 @@
     }
   }
 
-  &__arrow{
+  &__arrow {
     cursor: pointer;
     width: 90%;
 
-    &:nth-of-type(2){
+    &:nth-of-type(2) {
       justify-self: end;
     }
   }
 
-  &__info{
+  &__info {
     color: $white;
     font-family: $sofiaSans;
     font-size: 20px;
   }
 
-  &__subtitle{
+  &__subtitle {
     font-size: 2.3rem;
     text-transform: capitalize;
     position: relative;
     top: -35px;
 
-    & span{
+    & span {
       font-size: 15px;
       vertical-align: super;
     }
   }
 
-  &__review{
+  &__review {
     position: relative;
 
   }
@@ -84,32 +84,32 @@
 
 
 
-@media (max-width: 680px){
-  .slider{
+@media (max-width: 680px) {
+  .slider {
 
-    &__container{
+    &__container {
       grid-template-columns: 25px 1fr 25px;
     }
 
-    &__arrow{
+    &__arrow {
       width: 100%;
     }
 
-    &__body{
+    &__body {
       grid-template-columns: 1fr;
       grid-template-rows: max-content 1fr;
       align-items: center;
       text-align: center;
     }
 
-    &__subtitle{
+    &__subtitle {
       top: 0;
     }
 
-    &__img{
+    &__img {
       grid-row: 1/2;
-    
-      &--img{
+
+      &--img {
         width: 210px;
         height: 210px;
       }

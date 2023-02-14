@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,10 +17,12 @@
   <!-- LINKS SOFIA SANS FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@200;300;400;600;700&display=swap"
+    rel="stylesheet">
   <!-- LINK CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="body">
   <header class="header__travels">
     <nav class="nav">
@@ -27,14 +30,19 @@
         <p class="nav__container--logo"><img src="img/svg/plane.svg" alt="">DISC.OVER Arg</p>
         <div class="nav__container--menu" id="nav">
           <ul class="nav__container--menu--list">
-            <li class="nav__container--menu--item"><a href="index.html" class="nav__container--menu--link">Inicio</a></li>
-            <li class="nav__container--menu--item"><a href="#SearchTravels" class="nav__container--menu--link">Buscar Destino</a></li>
-            <li class="nav__container--menu--item"><a href="#allDestinations" class="nav__container--menu--link">Destinos</a></li>
-            <li class="nav__container--menu--item"><a href="contact.html" class="nav__container--menu--link">contactanos</a></li>
-            <a href="" id="closeMenu" ><i class="bi bi-x-lg"></i></a>
+            <li class="nav__container--menu--item"><a href="index.html" class="nav__container--menu--link">Inicio</a>
+            </li>
+            <li class="nav__container--menu--item"><a href="#SearchTravels" class="nav__container--menu--link">Buscar
+                Destino</a></li>
+            <li class="nav__container--menu--item"><a href="#allDestinations"
+                class="nav__container--menu--link">Destinos</a></li>
+            <li class="nav__container--menu--item"><a href="contact.html"
+                class="nav__container--menu--link">contactanos</a></li>
+            <a href="" id="closeMenu"><i class="bi bi-x-lg"></i></a>
           </ul>
         </div>
-        <p class="nav__container--cart cartID" id="cart"><i class="bi bi-cart3"></i><span id="cartQuant" class="nav__menu--cart"></span></p>
+        <p class="nav__container--cart cartID" id="cart"><i class="bi bi-cart3"></i><span id="cartQuant"
+            class="nav__menu--cart"></span></p>
         <div id="navMenu" class="nav__menuIcon">
           <i class="bi bi-text-indent-left" id="navMenuIcon"></i>
         </div>
@@ -52,13 +60,9 @@
           <!-- DESTINATION -->
           <div class="travel__form--container">
             <label for="destination" class="travel__form--container--label">Destino</label>
-            <input type="search" name="destination" id="searchTravelInput" class="travel__form--container--input" placeholder="Busque su destino">
+            <input type="search" name="destination" id="searchTravelInput" class="travel__form--container--input"
+              placeholder="Busque su destino">
           </div>
-          <!-- PEOPLE -->
-          <!-- <div class="travel__form--container">
-            <label for="people" class="travel__form--container--label">N° de Pasajeros</label>
-            <input type="text" name="people" id="people" class="travel__form--container--input" placeholder="N° de pasajeros">
-          </div> -->
           <!-- CHECKIN -->
           <div class="travel__form--container">
             <label for="checkin" class="travel__form--container--label">CheckIn</label>
@@ -67,7 +71,7 @@
           <!-- CHECKOUT -->
           <div class="travel__form--container">
             <label for="checkout" class="travel__form--container--label">CheckOut</label>
-            <input type="date" name="checkout" id="checkout" required class="travel__form--container--input" >
+            <input type="date" name="checkout" id="checkout" required class="travel__form--container--input">
           </div>
         </form>
         <div class="travel__btn">
@@ -104,17 +108,19 @@
     <!-- TRAVELS -->
     <section class="travels" id="allDestinations">
       <h2 class="travels__title">Viajes</h2>
-      <p class="travels__text">Conoce todas las provincias Argentinas para llenarte de sus culturas y miles de historias que tienen los residentes de cada una</p>
+      <p class="travels__text">Conoce todas las provincias Argentinas para llenarte de sus culturas y miles de historias
+        que tienen los residentes de cada una</p>
       <div class="travels__container mt-5" id="travelsContainer"></div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer__container">
-      <p class="footer__img">DISC.OVER ARG</p> 
+      <p class="footer__img">DISC.OVER ARG</p>
       <ul class="footer__list">
         <li class="footer__text">2023&copy;DISC.OVER arg | All Rigths Reserved</li>
-        <li class="footer__text2">Diseño y Desarrollo por <a href="mailto:francooursinoo@gmail.com">Franco Ursino</a></li>
+        <li class="footer__text2">Diseño y Desarrollo por <a href="mailto:francooursinoo@gmail.com">Franco Ursino</a>
+        </li>
       </ul>
       <div class="footer__icons">
         <a href="">
@@ -133,13 +139,14 @@
 
 
 
-<!-- LINK NAV JS -->
-<script src="js/nav.js"></script>
-<!-- LINKS JS -->
-<script src="js/travels.js"></script>
-<script src="js/cart.js"></script>
-<script src="js/filter.js"></script>
-<!-- LINK SWEET ALERT JS -->
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- LINK NAV JS -->
+  <script src="js/nav.js"></script>
+  <!-- LINKS JS -->
+  <script src="js/travels.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/filter.js"></script>
+  <!-- LINK SWEET ALERT JS -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
+
 </html>

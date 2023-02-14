@@ -1,4 +1,4 @@
-.modal__container{
+.modal__container {
   width: 60%;
   margin-left: 20em;
   // max-height: 80vh;
@@ -14,27 +14,27 @@
   top: 5vh;
   scrollbar-color: none;
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     display: none;
   }
 
-  .modal__header{
+  .modal__header {
     display: flex;
     justify-content: space-around;
     background-color: rgba(42, 42, 42, 0.5);
     color: $white;
     width: 100%;
-    
-    .modal__title{
+
+    .modal__title {
       justify-content: start;
     }
-    
-    .modal__button{
+
+    .modal__button {
       cursor: pointer;
     }
   }
 
-  .modal__cont{
+  .modal__cont {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -42,18 +42,18 @@
     width: 95%;
     margin: 5px;
 
-    &--img{
+    &--img {
       width: 130px;
       height: 110px;
       object-fit: contain;
 
-      &--img{
+      &--img {
         width: 120px;
         height: 100px;
       }
     }
 
-    &--travel{
+    &--travel {
       display: grid;
       grid-template-columns: 2fr repeat(3, 1fr);
       grid-template-rows: 1fr;
@@ -63,49 +63,50 @@
       width: 100%;
       color: $white;
 
-      &--container--quan{
+      &--container--quan {
         margin-left: 3px;
       }
 
-      .modal__cont--deleteTravel{
+      .modal__cont--deleteTravel {
         color: $white;
       }
     }
   }
 }
 
-.total__container{
+.total__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 5px;
 
-  &--total{
+  &--total {
     justify-content: center;
     text-align: center;
     padding-top: 4px;
   }
-  
-  &--btn{
+
+  &--btn {
     border: 1px solid $gray;
     border-radius: 15px;
     padding: 3px 7px;
     color: $gray;
 
-    &:hover{
+    &:hover {
       border: 1px solid $lazyBlue;
       color: $lazyBlue;
     }
   }
 }
 
-.more, .less{
+.more,
+.less {
   cursor: pointer;
   display: flex;
   justify-content: center;
 }
 
-@media (max-width: 799px){
-  .modal__container{
+@media (max-width: 799px) {
+  .modal__container {
     width: 80%;
     margin-left: 3em;
   }

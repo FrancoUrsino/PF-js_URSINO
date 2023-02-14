@@ -6,7 +6,7 @@ valueDisplays.forEach((valueDisplay) => {
   let endValue = parseInt(valueDisplay.getAttribute("data-val"));
   let duration = Math.floor(interval / endValue);
   let counter = setInterval(function () {
-    startValue +=1;
+    startValue += 1;
     valueDisplay.textContent = startValue;
     if (startValue == endValue) {
       clearInterval(counter);

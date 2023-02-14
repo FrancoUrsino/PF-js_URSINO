@@ -1,8 +1,8 @@
-.popular{
+.popular {
   width: 100%;
   margin: 15px auto;
 
-  &__container--title{
+  &__container--title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,10 +13,11 @@
     font-family: $sofiaSans;
     font-weight: 400;
     letter-spacing: 3px;
-    
+
 
   }
-  &__container--text{
+
+  &__container--text {
     color: $black;
     display: flex;
     justify-content: center;
@@ -31,7 +32,7 @@
     font-weight: 300;
   }
 
-  &__container--btn{
+  &__container--btn {
     font-family: $sofiaSans;
     display: flex;
     border: 2px solid $lazyBlue;
@@ -40,26 +41,26 @@
     justify-self: center;
     margin: auto;
     transition: $transition;
-    
-    & a{
+
+    & a {
       font-size: 25px;
       color: $lazyBlue;
       text-shadow: 1px 1px 4px $skyBlue;
 
-      &:hover{
+      &:hover {
         color: $white;
         text-shadow: 1px 1px 4px $gray;
       }
     }
-      
-    &:hover{
+
+    &:hover {
       background-color: $lazyBlue;
       border: 2px solid transparent;
     }
 
   }
 
-  &__container--list{
+  &__container--list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto));
     gap: 2em;
@@ -70,24 +71,25 @@
     padding: 0;
   }
 
-  &__container--list, &__container--list > .popular__container--list--item:not(:last-child){
+  &__container--list,
+  &__container--list>.popular__container--list--item:not(:last-child) {
     margin-bottom: 30px;
   }
 
-  &__card{
+  &__card {
     position: relative;
     overflow: hidden;
     border-radius: 25px;
     height: 500px;
     width: 350px;
 
-    &--img{
+    &--img {
       height: 100%;
       object-fit: cover;
       width: 100%;
     }
 
-    &--container{
+    &--container {
       position: absolute;
       bottom: 20px;
       left: 20px;
@@ -98,7 +100,7 @@
       padding: 20px;
       color: white;
 
-      &--stars{
+      &--stars {
         color: white;
         position: absolute;
         top: 0;
@@ -109,13 +111,13 @@
         transform: translateY(-50%);
       }
 
-      &--site{
+      &--site {
         font-size: 13px;
         font-weight: bolder;
         margin-bottom: 4px;
       }
 
-      &--title{
+      &--title {
         font-size: 1.2rem;
         font-family: $aboreto;
       }
@@ -123,8 +125,8 @@
   }
 }
 
-@media (min-width: 550px){
-  .popular__container--title{
+@media (min-width: 550px) {
+  .popular__container--title {
     font-size: 3.4rem;
   }
 }
