@@ -1082,15 +1082,16 @@ h1, h2, h3, h4, h5, h6, p {
   background-position: center;
   background-repeat: no-repeat;
   color: #6c9ed6;
+  overflow-x: hidden;
 }
 
 .form {
-  height: 100vh;
+  height: auto;
   padding: 35px 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: -1;
 }
 .form__container {
   width: 100%;
