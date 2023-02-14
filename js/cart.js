@@ -94,14 +94,14 @@ const showModalCart = () => {
 
           case "si":
             swal("Felicidades!!", "Compraste tus pasajes", "success");
+            cartContent.innerHTML = "";
             saveLocal();
-            showModalCart();
             break;
 
           default:
             swal("OH Bueno", "Esperamos volar contigo la proxina", "error");
+            cartContent.innerHTML = "";
             saveLocal();
-            showCart();
         }
       });
     let cartContent = document.querySelectorAll('.modal__cont');
